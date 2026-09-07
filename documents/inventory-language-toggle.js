@@ -2,6 +2,21 @@
   'use strict';
 
   const ko = {
+    'Overview': '전체 현황',
+    'Pacific Island Project · verified local archive': '태평양 도서국 프로젝트 · 확인된 로컬 보관 자료',
+    'Sentinel‑2 Local Data Inventory': 'Sentinel‑2 로컬 자료 인벤토리',
+    'Archive overview and workflow status': '보관 자료 전체 현황 및 워크플로 상태',
+    'Tidung checklist status': '티둥 체크리스트 상태',
+    'First processing scenes': '첫 처리 영상',
+    'Location': '지역',
+    'Selectable scene map': '선택 가능한 영상 지도',
+    'Scene preview slider': '영상 미리보기 슬라이더',
+    'Complete survey-window screening list': '전체 조사 기간 영상 스크리닝 목록',
+    'Previous scene': '이전 영상',
+    'Next scene': '다음 영상',
+    'All layers ON': '전체 레이어 켜기',
+    'All layers OFF': '전체 레이어 끄기',
+    'Layer opacity': '레이어 투명도',
     'Coverage': '연구지역',
     'Survey windows': '조사 기간',
     'Recommended download': '권장 다운로드',
