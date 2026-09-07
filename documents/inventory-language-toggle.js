@@ -15,12 +15,15 @@
     'Recommended download manifest': '권장 다운로드 목록',
     'Download manifest CSV': '목록 CSV 다운로드',
     'Complete candidate catalogue': '전체 후보 영상 목록',
+    'Scene examples': '영상 예시',
+    'Tidung example scenes': '티둥 영상 예시',
     'All sites': '전체 지역',
     'Both levels': '전체 처리 수준',
     'All cloud values': '전체 구름 비율',
     '≤ 20% cloud': '구름 20% 이하',
     '> 20% cloud': '구름 20% 초과',
     'Tidung current archive and selection readiness': '티둥 보유 자료 및 선정 준비도',
+    'How many scenes can we use now?': '현재 사용할 수 있는 영상은 몇 개인가?',
     'Available locally:': '로컬 보유 자료:',
     'Inventory role:': '인벤토리 역할:',
     'Required scene fields before use:': '사용 전 필수 영상 항목:',
@@ -170,24 +173,45 @@
     document.title = current === 'ko'
       ? document.title.replace('Data Collection & Download', '자료 수집 및 다운로드').replace('Data Collection — Standalone', '자료 수집 — 독립형')
       : document.title.replace('자료 수집 및 다운로드', 'Data Collection & Download').replace('자료 수집 — 독립형', 'Data Collection — Standalone');
-    const button = document.getElementById('inventoryLanguageToggle');
-    if (button) {
-      button.textContent = current === 'en' ? 'KOR' : 'ENG';
-      button.setAttribute('aria-label', current === 'en' ? '한국어로 전환' : 'Switch to English');
+    const englishButton = document.getElementById('inventoryLanguageEnglish');
+    const koreanButton = document.getElementById('inventoryLanguageKorean');
+    if (englishButton && koreanButton) {
+      englishButton.setAttribute('aria-pressed', String(current === 'en'));
+      koreanButton.setAttribute('aria-pressed', String(current === 'ko'));
+      englishButton.style.background = current === 'en' ? '#fff' : 'transparent';
+      englishButton.style.color = current === 'en' ? '#123c48' : '#fff';
+      koreanButton.style.background = current === 'ko' ? '#fff' : 'transparent';
+      koreanButton.style.color = current === 'ko' ? '#123c48' : '#fff';
     }
     if (observer) observer.observe(document.body, { childList: true, subtree: true });
   }
 
-  const button = document.createElement('button');
-  button.id = 'inventoryLanguageToggle';
-  button.type = 'button';
-  button.style.cssText = 'position:fixed;right:18px;top:18px;z-index:2500;border:1px solid rgba(255,255,255,.65);border-radius:999px;background:#123c48;color:#fff;padding:9px 14px;font:800 12px/1 system-ui;letter-spacing:.08em;box-shadow:0 4px 16px rgba(0,0,0,.2);cursor:pointer';
-  button.addEventListener('click', function () {
-    current = current === 'en' ? 'ko' : 'en';
-    localStorage.setItem('inventoryLanguage', current);
-    renderLanguage();
-  });
-  document.body.appendChild(button);
+  const switcher = document.createElement('div');
+  switcher.id = 'inventoryLanguageSwitcher';
+  switcher.setAttribute('role', 'group');
+  switcher.setAttribute('aria-label', 'Language / 언어');
+  switcher.style.cssText = 'position:fixed;right:18px;top:18px;z-index:2500;display:flex;align-items:center;gap:2px;border:1px solid rgba(255,255,255,.72);border-radius:999px;background:#123c48;padding:3px;box-shadow:0 4px 16px rgba(0,0,0,.2)';
+  function makeLanguageButton(id, label, language) {
+    const button = document.createElement('button');
+    button.id = id;
+    button.type = 'button';
+    button.textContent = label;
+    button.style.cssText = 'border:0;border-radius:999px;background:transparent;color:#fff;padding:7px 10px;font:800 12px/1 system-ui;letter-spacing:.06em;cursor:pointer';
+    button.addEventListener('click', function () {
+      current = language;
+      localStorage.setItem('inventoryLanguage', current);
+      renderLanguage();
+    });
+    return button;
+  }
+  switcher.appendChild(makeLanguageButton('inventoryLanguageEnglish', 'ENG', 'en'));
+  const separator = document.createElement('span');
+  separator.textContent = '|';
+  separator.setAttribute('aria-hidden', 'true');
+  separator.style.cssText = 'color:rgba(255,255,255,.7);font:700 11px/1 system-ui';
+  switcher.appendChild(separator);
+  switcher.appendChild(makeLanguageButton('inventoryLanguageKorean', 'KOR', 'ko'));
+  document.body.appendChild(switcher);
 
   observer = new MutationObserver(function () {
     if (current === 'ko') renderLanguage();
