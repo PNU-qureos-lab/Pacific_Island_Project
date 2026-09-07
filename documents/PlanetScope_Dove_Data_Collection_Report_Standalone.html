@@ -780,5 +780,6 @@ function openPreview(src,id){el('modalImage').src=src;el('modalImage').alt=id;el
 el('opacity').addEventListener('input',event=>{el('opacityText').textContent=`${event.target.value}%`;activeLayers.forEach(layer=>layer.setOpacity(Number(event.target.value)/100))});document.addEventListener('keydown',event=>{if(event.key==='Escape')closePreview(event)});
 initSummaryMap();initDetailMap();renderTabs();renderLocationHead();renderLayerList();renderMetadata();fitLocation();activateFirstScene();
 </script>
+<script src="inventory-language-toggle.js"></script>
 </body>
 </html>
