@@ -17,6 +17,9 @@
     'Cloud mask only': '구름 마스크만 표시',
     'Scene preview slider': '영상 미리보기 슬라이더',
     'Complete survey-window screening list': '전체 조사 기간 영상 스크리닝 목록',
+    'Complete available-data inventory': '전체 보유 자료 인벤토리',
+    'Every available Tidung product listed': '보유한 모든 티둥 제품 목록화',
+    'available local SAFE products': '보유 로컬 SAFE 제품',
     'Previous scene': '이전 영상',
     'Next scene': '다음 영상',
     'All layers ON': '전체 레이어 켜기',
@@ -167,6 +170,7 @@
     if (/^\d+ rows$/.test(value)) return value.replace(' rows', '개 행');
     if (/^\d+ candidates$/.test(value)) return value.replace(' candidates', '개 후보');
     if (/^\d+ scenes received$/i.test(value)) return value.replace(/scenes received/i, '개 영상 수령');
+    if (/^[\d,]+ available local SAFE products$/.test(value)) return value.replace(' available local SAFE products', '개 로컬 SAFE 제품 보유');
     return value;
   }
 
