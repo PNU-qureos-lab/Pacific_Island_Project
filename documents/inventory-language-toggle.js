@@ -149,6 +149,8 @@
     'COMPLETE': '완료',
     'PENDING REVIEW': '검토 대기',
     'PENDING': '대기',
+    'REVIEW REQUIRED': '검토 필요',
+    'NOT AVAILABLE LOCALLY': '로컬 자료 없음',
     'METHOD NOT SELECTED': '방법 미선정',
     'PURPOSE': '목적',
     'REQUESTED': '요청 기간',
