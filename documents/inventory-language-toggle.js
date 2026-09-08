@@ -162,19 +162,157 @@
     'METHOD NOT SELECTED': '방법 미선정',
     'PURPOSE': '목적',
     'REQUESTED': '요청 기간',
-    'ACTUALLY RECEIVED': '실제 수령일'
+    'ACTUALLY RECEIVED': '실제 수령일',
+    'Pacific Island Benthic Project · Satellite Data Collection': '태평양 도서국 저서생태 프로젝트 · 위성자료 수집',
+    'PlanetScope Dove Data Inventory': 'PlanetScope Dove 자료 인벤토리',
+    'Exactly what was delivered for the project, and how each site will be used.': '프로젝트에 실제로 수령된 자료와 지역별 활용 계획을 정리했습니다.',
+    '1. Files delivered': '1. 수령 자료',
+    '2. Delivery by site': '2. 지역별 수령 현황',
+    '3. How we will use the data': '3. 자료 활용 계획',
+    '4. Scene inventory': '4. 영상 인벤토리',
+    'One complete PlanetScope SuperDove package was checked for every listed scene.': '목록의 모든 영상에 대해 완전한 PlanetScope SuperDove 패키지를 확인했습니다.',
+    'For this project, Planet supplied 3 m, orthorectified 8-band surface-reflectance image clips and their matching quality masks. These are the source files for later image-quality review and, only after that, benthic and depth work.': 'Planet은 본 프로젝트에 3 m 정사보정 8밴드 지표반사도 영상과 대응 품질 마스크를 제공했습니다. 영상 품질 검토를 먼저 통과한 뒤 저서생태 및 수심 분석에 사용합니다.',
+    'Delivered product': '수령 제품',
+    'Files per scene': '영상별 파일',
+    'Spatial detail': '공간 해상도',
+    'Processing level': '처리 수준',
+    'Reflectance values': '반사도 값',
+    'Collection capability': '촬영 주기',
+    '8-band Analytic Surface Reflectance': '8밴드 분석용 지표반사도',
+    'SR GeoTIFF + UDM2 + XML/JSON metadata': 'SR GeoTIFF + UDM2 + XML/JSON 메타데이터',
+    '3 m output pixels; 3.2–4.0 m GSD in this delivery': '출력 픽셀 3 m; 이번 수령 자료의 GSD 3.2–4.0 m',
+    'Orthorectified and atmospherically corrected SR': '정사보정 및 대기보정된 지표반사도',
+    'Unitless; stored as DN ÷ 10,000': '무차원 값; DN ÷ 10,000으로 저장',
+    'Near-daily constellation coverage': '위성군 기반 거의 매일 촬영 가능',
+    'Delivered package verified:': '수령 패키지 확인 완료:',
+    '48 SR images, 48 UDM2 masks and 48 XML metadata files, with JSON/catalog records, across four ZIP archives.': '4개 ZIP에 SR 영상 48개, UDM2 마스크 48개, XML 메타데이터 48개와 JSON/카탈로그 기록이 있습니다.',
+    'Verified delivery source:': '확인된 자료 위치:',
+    'Product source:': '제품 정보 출처:',
+    'Complete': '완료',
+    'Why each site is in this inventory, the requested dates, and the files received.': '지역별 포함 목적, 요청 기간, 실제 수령 자료를 보여줍니다.',
+    'Delivery result:': '수령 결과:',
+    'Field validation': '현장자료 검증',
+    'Bleaching comparison': '백화 비교',
+    'Alternative site': '대체 지역',
+    'Map': '지도',
+    'Satellite': '위성영상',
+    'Use the same delivered SR image, UDM2 mask and metadata together. No scene is final until it passes the later quality check.': '수령한 SR 영상, UDM2 마스크, 메타데이터를 함께 사용합니다. 이후 품질 검사를 통과하기 전에는 어떤 영상도 최종 선정하지 않습니다.',
+    'Site': '지역',
+    'Scenes': '영상 수',
+    'Planned use': '활용 계획',
+    'Before it is used': '사용 전 확인',
+    'Main site:': '주요 지역:',
+    'Bleaching comparison:': '백화 비교:',
+    'Alternative bleaching site:': '대체 백화 비교 지역:',
+    'run the full depth and fractional-coverage workflow and compare results with field/UAV reference data.': '전체 수심·피복률 분석을 수행하고 현장/UAV 기준자료와 비교합니다.',
+    'Choose the clearest scene closest to the field date; check water quality and align it to the reference image.': '현장조사 날짜와 가장 가까운 맑은 영상을 선택하고 수질 상태를 확인한 뒤 기준영상에 정합합니다.',
+    'compare selected baseline and bleaching-period dates.': '선정된 기준시기와 백화시기 영상을 비교합니다.',
+    'use the clearest dates around the intended event windows.': '의도한 이벤트 기간 주변에서 가장 맑은 날짜를 사용합니다.',
+    'compare the closest usable before/event dates.': '사용 가능한 백화 전·이벤트 날짜 중 가장 가까운 날짜를 비교합니다.',
+    'Check the Allen Coral Atlas period, local water quality, coverage and alignment.': 'Allen Coral Atlas 기간, 지역 수질, 영상 범위와 정합을 확인합니다.',
+    'Use closer but lower-quality dates only as sensitivity checks.': '기간에 더 가깝지만 품질이 낮은 날짜는 민감도 검사에만 사용합니다.',
+    'All selected scenes have Planet “test” quality, so local review is required.': '선정 영상은 모두 Planet “test” 품질이므로 관심지역 검토가 필요합니다.',
+    'No PlanetScope analysis from this delivery.': '이번 수령 자료로는 PlanetScope 분석을 수행할 수 없습니다.',
+    'PlanetScope data would need to be obtained first.': '먼저 PlanetScope 자료를 확보해야 합니다.',
+    'Bleaching comparison: intended period → PlanetScope date to use': '백화 비교: 의도한 기간 → 사용할 PlanetScope 날짜',
+    'Dates are candidates until the local reef AOI and Allen Coral Atlas event period are recorded.': '지역 산호초 관심영역과 Allen Coral Atlas 이벤트 기간을 기록하기 전까지는 후보 날짜입니다.',
+    'Comparison': '비교 대상',
+    'Initial intention from Allen Coral Atlas check': 'Allen Coral Atlas 확인에 따른 초기 계획',
+    'Delivered PlanetScope dates to use': '사용할 수령 PlanetScope 날짜',
+    'Decision': '선정 판단',
+    'Before:': '백화 전:',
+    'Peak:': '최고 시기:',
+    'Baseline:': '기준시기:',
+    'Bleaching period:': '백화시기:',
+    'Backups:': '예비 날짜:',
+    'Baseline candidate:': '기준시기 후보:',
+    'Bleaching-period candidate:': '백화시기 후보:',
+    'Sensitivity:': '민감도 검사:',
+    'Timing checks:': '시기 민감도 검사:',
+    'Primary comparison.': '주요 비교.',
+    'Conditional comparison.': '조건부 비교.',
+    'Quality-first comparison.': '품질 우선 비교.',
+    'Alternative comparison.': '대체 비교.',
+    'Cannot run.': '수행 불가.',
+    'Both dates match the intended windows and have 96–100% whole-scene clear metadata.': '두 날짜 모두 의도한 기간과 일치하며 전체 영상 기준 맑음 메타데이터가 96–100%입니다.',
+    'The 20 Jan scenes are cloudy/hazy; 29 Jan is clearer but three days outside the requested window. Select the clearest local 11 May strip.': '1월 20일 영상은 구름과 연무가 많습니다. 1월 29일은 더 맑지만 요청 기간에서 3일 벗어납니다. 5월 11일 영상 중 관심지역이 가장 맑은 스트립을 선택합니다.',
+    'The closer 16 Dec scenes are hazy and 12 Jun includes cloud; use them only to test date sensitivity.': '기간에 더 가까운 12월 16일 영상은 연무가 많고 6월 12일 영상에는 구름이 있어 날짜 민감도 검사에만 사용합니다.',
+    'These are the closest clear dates, but their Planet quality is “test”; inspect the reef AOI before acceptance.': '가장 가까우면서 맑은 날짜이지만 Planet 품질이 “test”이므로 선정 전에 산호초 관심영역을 확인합니다.',
+    'No Fiji scenes were delivered.': '피지 영상은 수령되지 않았습니다.',
+    'No PlanetScope dates available': '사용 가능한 PlanetScope 날짜 없음',
+    'How Allen Coral Atlas and PlanetScope will be used together': 'Allen Coral Atlas와 PlanetScope의 연계 활용 방법',
+    'Allen Coral Atlas identifies the event context; PlanetScope supplies the 3 m images used for this project comparison.': 'Allen Coral Atlas는 백화 이벤트의 시간·공간적 배경을 제공하고, PlanetScope는 본 프로젝트 비교에 사용할 3 m 영상을 제공합니다.',
+    '1 · Record Atlas evidence': '1 · Atlas 근거 기록',
+    '2 · Assign scene roles': '2 · 영상 역할 지정',
+    '3 · Process both dates equally': '3 · 두 날짜 동일 처리',
+    '4 · Compare results': '4 · 결과 비교',
+    'Save the AOI, monitoring layer, bi-weekly period, bleaching class/thermal alert and access date.': '관심영역, 모니터링 레이어, 2주 기간, 백화 등급/열 스트레스 경보와 접근 날짜를 저장합니다.',
+    'Label each Planet date as baseline, bleaching-period, backup or reject only after checking the recorded Atlas period.': '기록된 Atlas 기간을 확인한 뒤 각 Planet 날짜를 기준시기, 백화시기, 예비 또는 제외로 지정합니다.',
+    'Apply the same water mask, haze/cloud/shadow and glint checks, co-registration, depth limits and common valid-pixel area.': '두 날짜에 같은 수체 마스크, 연무/구름/그림자 및 선글린트 검사, 공동정합, 수심 제한과 공통 유효 픽셀 영역을 적용합니다.',
+    'Measure change in bottom/water reflectance and benthic or fractional coverage, then compare the spatial pattern with the Atlas bleaching layer.': '해저/수체 반사도와 저서생태 또는 피복률 변화를 계산하고 공간 패턴을 Atlas 백화 레이어와 비교합니다.',
+    'Important interpretation:': '중요한 해석:',
+    '“Baseline” means a candidate date outside the recorded bleaching event; it does not prove zero bleaching. “Bleaching-period” means the date overlaps or is nearest to the Atlas event window; one PlanetScope image alone does not prove that coral bleaching caused every brightness change. Allen Coral Atlas uses a pre-stress baseline and bi-weekly Sentinel-2 monitoring, so its dates are not a one-to-one match with single-day PlanetScope scenes.': '“기준시기”는 기록된 백화 이벤트 밖의 후보 날짜이며 백화가 전혀 없었음을 증명하지 않습니다. “백화시기”는 Atlas 이벤트 기간과 겹치거나 가장 가까운 날짜입니다. PlanetScope 한 장만으로 모든 밝기 변화의 원인이 산호 백화라고 증명할 수 없습니다. Allen Coral Atlas는 스트레스 이전 기준영상과 2주 단위 Sentinel-2 모니터링을 사용하므로 단일 날짜 PlanetScope 영상과 일대일로 대응하지 않습니다.',
+    'Allen Coral Atlas monitoring method': 'Allen Coral Atlas 모니터링 방법',
+    'Simple order of work:': '간단한 작업 순서:',
+    'confirm the Atlas period → select and quality-check the PlanetScope pair → co-register common reef pixels → run depth/fractional-coverage comparison → report agreement and disagreement with the Atlas pattern. Tidung remains the field/UAV validation site.': 'Atlas 기간 확인 → PlanetScope 영상쌍 선정 및 품질 검사 → 공통 산호초 픽셀 공동정합 → 수심·피복률 비교 → Atlas 패턴과의 일치·불일치 보고 순서로 진행합니다. Tidung은 현장/UAV 검증 지역으로 유지합니다.',
+    'Choose one site tab. Each row is one delivered scene; turn its layer on to see its footprint and preview.': '지역 탭을 선택하세요. 각 행은 수령 영상 한 장이며, 레이어를 켜면 촬영 범위와 미리보기를 확인할 수 있습니다.',
+    'Position check:': '위치 확인:',
+    'compare one layer at a time. When two transparent previews are ON, their overlap looks darker even without a large displacement.': '한 번에 한 레이어씩 비교하세요. 투명한 미리보기 두 개를 동시에 켜면 큰 위치 오차가 없어도 중첩부가 더 어둡게 보입니다.',
+    'Overlap displacement:': '중첩 위치 오차:',
+    'Turn on two or more overlapping scenes to see the measured displacement summary.': '중첩 영상 두 장 이상을 켜면 측정된 위치 오차 요약이 표시됩니다.',
+    'Real image displacement': '실제 영상 위치 오차',
+    'Yes. Scene geolocation can differ slightly. The Tongatapu 7 Jun 2024 pair differs by about 1.52 pixels (4.6 m), measured from stable land texture.': '영상 간 지리위치는 조금 다를 수 있습니다. 안정적인 육상 질감을 기준으로 측정한 Tongatapu 2024년 6월 7일 영상쌍의 차이는 약 1.52픽셀(4.6 m)입니다.',
+    'HTML map display effect': 'HTML 지도 표시 효과',
+    'The large dark diagonal is mainly created where transparent preview layers are stacked. It makes the difference look larger, but it is not the measured positional shift.': '큰 대각선 형태의 어두운 영역은 주로 투명 미리보기 레이어가 겹치면서 생깁니다. 차이가 더 크게 보이지만 측정된 위치 이동량은 아닙니다.',
+    'How to read the imagery table': '영상 표 읽는 방법',
+    'Percentages describe the entire satellite scene, not only the reef study area.': '백분율은 산호초 연구지역만이 아니라 전체 위성 영상을 나타냅니다.',
+    'Area without cloud, haze, cloud shadow or snow. A high value means more potentially usable pixels.': '구름, 연무, 구름 그림자 또는 눈이 없는 영역입니다. 값이 높을수록 사용 가능한 픽셀이 많을 가능성이 큽니다.',
+    'Area covered by opaque cloud where the surface cannot be seen.': '지표면이 보이지 않는 불투명 구름 영역입니다.',
+    'Area with thin atmospheric interference. The surface may be visible, but its spectral value can be unreliable.': '얇은 대기 간섭이 있는 영역입니다. 지표가 보여도 분광값은 신뢰하기 어려울 수 있습니다.',
+    'Area darkened by cloud or haze shadow. These pixels should normally be excluded from water analysis.': '구름 또는 연무 그림자로 어두워진 영역입니다. 일반적으로 수체 분석에서 제외해야 합니다.',
+    'Approximate ground spacing of the sensor samples when the image was acquired. It changes slightly with altitude and viewing geometry.': '촬영 당시 센서 표본의 대략적인 지상 간격입니다. 고도와 관측 기하에 따라 조금 달라집니다.',
+    'Size of each pixel in the delivered orthorectified GeoTIFF grid. Here it is fixed at 3 m, even when acquisition GSD differs.': '수령한 정사보정 GeoTIFF 격자의 픽셀 크기입니다. 촬영 GSD가 달라도 여기서는 3 m로 고정됩니다.',
+    'Identifier of the individual SuperDove spacecraft that captured the scene.': '영상을 촬영한 개별 SuperDove 위성의 식별자입니다.',
+    'Provider metadata plus a preliminary overlap-alignment check against one reference scene per site.': '제공자 메타데이터와 지역별 기준영상에 대한 예비 중첩 정합 검사 결과입니다.',
+    'Overlap alignment': '중첩 정합',
+    'Reference': '기준영상',
+    'Manual check': '수동 확인',
+    'Purpose': '목적',
+    'Requested': '요청 기간',
+    'Actually received': '실제 수령일',
+    'Field-survey validation': '현장조사 검증',
+    'Before / peak bleaching comparison in 2024 and 2026': '2024년 및 2026년 백화 전·최고 시기 비교',
+    'Before / peak bleaching comparison': '백화 전·최고 시기 비교',
+    'Alternative bleaching-comparison site': '대체 백화 비교 지역'
   };
 
-  const originals = new WeakMap();
+  const koParts = [
+    ['Before:', '백화 전:'],
+    ['Peak:', '최고 시기:'],
+    ['Baseline candidate:', '기준시기 후보:'],
+    ['Bleaching-period candidate:', '백화시기 후보:'],
+    ['Bleaching period:', '백화시기:'],
+    ['Baseline:', '기준시기:'],
+    ['Backups:', '예비 날짜:'],
+    ['Sensitivity:', '민감도 검사:'],
+    ['Timing checks:', '시기 민감도 검사:']
+  ];
+
+  const originals = new Map();
   const excluded = new Set(['SCRIPT', 'STYLE', 'NOSCRIPT', 'TEXTAREA', 'CODE']);
   let current = localStorage.getItem('inventoryLanguage') === 'ko' ? 'ko' : 'en';
   let observer;
 
   function translateDynamic(value) {
     if (ko[value]) return ko[value];
+    for (const [english, korean] of koParts) {
+      if (value.startsWith(english)) return korean + value.slice(english.length);
+    }
     if (/^\d+ rows$/.test(value)) return value.replace(' rows', '개 행');
     if (/^\d+ candidates$/.test(value)) return value.replace(' candidates', '개 후보');
     if (/^\d+ scenes received$/i.test(value)) return value.replace(/scenes received/i, '개 영상 수령');
+    if (/^\d{4}-\d{2}-\d{2} · \d+ scenes?$/.test(value)) return value.replace(/ · (\d+) scenes?$/, ' · $1개 영상');
+    if (/^\d+% clear · GSD /.test(value)) return value.replace('% clear · GSD ', '% 맑음 · GSD ');
     if (/^[\d,]+ available local SAFE products$/.test(value)) return value.replace(' available local SAFE products', '개 로컬 SAFE 제품 보유');
     return value;
   }
@@ -200,6 +338,9 @@
       if (!trimmed) continue;
       const translated = translateDynamic(trimmed);
       node.nodeValue = original.replace(trimmed, translated);
+    }
+    for (const [node] of originals) {
+      if (!node.isConnected) originals.delete(node);
     }
     document.documentElement.lang = current;
     document.title = current === 'ko'
