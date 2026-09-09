@@ -60,7 +60,7 @@ h1,h2,h3{letter-spacing:-.015em}h2{font-size:1.55rem;line-height:1.3}h3{font-siz
 @media(max-width:900px){.method-plain,.decision-evidence,#hydroSimulationExplorer .select-row{grid-template-columns:1fr 1fr}.glint-types{grid-template-columns:1fr}}
 @media(max-width:600px){.method-plain,.decision-evidence,#hydroSimulationExplorer .select-row{grid-template-columns:1fr}}
 </style>
-<link rel="stylesheet" href="assets/tidung_glint/v20.css?v=34">
+<link rel="stylesheet" href="assets/tidung_glint/v20.css?v=36">
 </head>
 <body>
 <header class="top"><div class="top-inner"><div class="brand">TIDUNG · SENTINEL-2 · GLINT CORRECTION</div><div class="language"><button data-lang="en" class="active">ENG</button><button data-lang="ko">KOR</button></div></div></header>
@@ -518,6 +518,6 @@ const renderSceneV18=renderScene;renderScene=function(){renderSceneV18();install
 function activateView(view){document.querySelectorAll('[data-view]').forEach(v=>v.classList.toggle('active',v.dataset.view===view));document.querySelectorAll('[data-view-button]').forEach(b=>b.classList.toggle('active',b.dataset.viewButton===view));if(view==='results')setTimeout(()=>{ensureMap();if(mainMap)mainMap.invalidateSize()},80);if(view==='hydro-inverse')setTimeout(renderHydroExplorer,80);window.scrollTo({top:0,behavior:'smooth'})}
 document.querySelectorAll('[data-view-button]').forEach(b=>b.onclick=()=>{let view=b.dataset.viewButton,pane=b.dataset.resultsPane,target=b.dataset.scrollTarget;if(pane){resultPane=pane;activateView('results');renderPaneTabs()}else activateView(view);if(target)setTimeout(()=>document.getElementById(target)?.scrollIntoView({behavior:'smooth',block:'start'}),120)});document.querySelectorAll('[data-lang]').forEach(b=>b.onclick=()=>{lang=b.dataset.lang;translate()});$('layerGroup').onchange=renderLayerOptions;$('layerSelect').onchange=e=>setMapLayer(e.target.value);$('zoomTidung').onclick=()=>{ensureMap();if(mainMap)mainMap.fitBounds(current.bounds,{padding:[10,10],maxZoom:15})};$('mapOpacity').oninput=e=>{if(mapOverlay)mapOverlay.setOpacity(+e.target.value/100)};$('toggleRaster').onclick=()=>{if(!mapOverlay)return;let on=mainMap.hasLayer(mapOverlay);if(on){mainMap.removeLayer(mapOverlay);$('toggleRaster').textContent=lang==='id'?'Tampilkan raster':lang==='ko'?'래스터 표시':'Show raster'}else{mapOverlay.addTo(mainMap);$('toggleRaster').textContent=t('hideRaster')}};$('acoliteBand').onchange=()=>{renderAcoliteOutput();renderNir()};$('hedleyBand').onchange=renderHedley;$('spectrumRoi').onchange=()=>{renderSpectrum();refreshDynamicGuides()};$('spectrumMethod').onchange=renderSpectrum;$('controlRegion').onchange=renderControl;$('metricSelect').onchange=renderMetric;$('transectBand').onchange=renderTransect;$('sceneScenario').onchange=renderHydroScene;$('hydroRoi').onchange=renderHydroScene;$('errorMetric').onchange=renderError;$('archiveMetric').onchange=renderArchive;$('outputFolder').textContent=DATA.output_folder||'C:\Users\phili\Documents\ChatGPT\ACOLITE-Glint Correction\outputs\Tidung_Glint_Comparison_Rerun_20260903';initHydroExplorer();translate();
 </script>
-<script src="assets/tidung_glint/v20.js?v=34"></script>
+<script src="assets/tidung_glint/v20.js?v=36"></script>
 </body>
 </html>
