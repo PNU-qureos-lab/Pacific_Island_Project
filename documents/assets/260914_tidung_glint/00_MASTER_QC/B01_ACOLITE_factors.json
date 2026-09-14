@@ -1,0 +1,752 @@
+{
+  "20200728_S2A": {
+    "safe": "H:\\Sentinel-2\\Tidung\\L2A\\S2A_MSIL2A_20200728T025551_N0500_R032_T48MXU_20230414T083054.SAFE",
+    "native_B01": "H:\\Sentinel-2\\Tidung\\L2A\\S2A_MSIL2A_20200728T025551_N0500_R032_T48MXU_20230414T083054.SAFE\\GRANULE\\L2A_T48MXU_A026627_20200728T031928\\IMG_DATA\\R60m\\T48MXU_20200728T025551_B01_60m.jp2",
+    "boa_quantification_value": 10000.0,
+    "boa_offset_B01": -1000.0,
+    "solar_zenith_deg": 35.1557413677922,
+    "AOT_550": 0.4440000057220459,
+    "factor_from_B11": 0.479539204486479,
+    "factor_from_B12": 0.4921481499248428,
+    "optical_terms": {
+      "B01": {
+        "wavelength_nm": 442.6950461055438,
+        "ttot": 0.7131058921057161,
+        "two_way_transmittance": 0.20461045121182125,
+        "fresnel_reflectance": 0.021147600059621338
+      },
+      "B11": {
+        "wavelength_nm": 1613.659406661006,
+        "ttot": 0.3339592553336068,
+        "two_way_transmittance": 0.47565944561330487,
+        "fresnel_reflectance": 0.018970057957047808
+      },
+      "B12": {
+        "wavelength_nm": 2202.366687171678,
+        "ttot": 0.29465984842959614,
+        "two_way_transmittance": 0.5191239073424687,
+        "fresnel_reflectance": 0.016936435586113525
+      }
+    }
+  },
+  "20210424_S2A": {
+    "safe": "H:\\Sentinel-2\\Tidung\\L2A\\S2A_MSIL2A_20210424T025541_N0500_R032_T48MXU_20230520T151954.SAFE",
+    "native_B01": "H:\\Sentinel-2\\Tidung\\L2A\\S2A_MSIL2A_20210424T025541_N0500_R032_T48MXU_20230520T151954.SAFE\\GRANULE\\L2A_T48MXU_A030488_20210424T030944\\IMG_DATA\\R60m\\T48MXU_20210424T025541_B01_60m.jp2",
+    "boa_quantification_value": 10000.0,
+    "boa_offset_B01": -1000.0,
+    "solar_zenith_deg": 29.7901959212732,
+    "AOT_550": 0.23399999737739563,
+    "factor_from_B11": 0.5695806829174831,
+    "factor_from_B12": 0.6096290165698404,
+    "optical_terms": {
+      "B01": {
+        "wavelength_nm": 442.6950461055438,
+        "ttot": 0.4883833666393329,
+        "two_way_transmittance": 0.34921485424034854,
+        "fresnel_reflectance": 0.0210942889476817
+      },
+      "B11": {
+        "wavelength_nm": 1613.659406661006,
+        "ttot": 0.17661002052018568,
+        "two_way_transmittance": 0.6835533422661677,
+        "fresnel_reflectance": 0.018920383553000256
+      },
+      "B12": {
+        "wavelength_nm": 2202.366687171678,
+        "ttot": 0.15546791588282446,
+        "two_way_transmittance": 0.7154049111881796,
+        "fresnel_reflectance": 0.016890404564986215
+      }
+    }
+  },
+  "20210608_S2B": {
+    "safe": "H:\\Sentinel-2\\Tidung\\L2A\\S2B_MSIL2A_20210608T025549_N0500_R032_T48MXU_20230314T064926.SAFE",
+    "native_B01": "H:\\Sentinel-2\\Tidung\\L2A\\S2B_MSIL2A_20210608T025549_N0500_R032_T48MXU_20230314T064926.SAFE\\GRANULE\\L2A_T48MXU_A022223_20210608T031000\\IMG_DATA\\R60m\\T48MXU_20210608T025549_B01_60m.jp2",
+    "boa_quantification_value": 10000.0,
+    "boa_offset_B01": -1000.0,
+    "solar_zenith_deg": 36.7821000765136,
+    "AOT_550": 0.3059999942779541,
+    "factor_from_B11": 0.5233850658851686,
+    "factor_from_B12": 0.5488908194440244,
+    "optical_terms": {
+      "B01": {
+        "wavelength_nm": 442.23127436510424,
+        "ttot": 0.5666298602364748,
+        "two_way_transmittance": 0.2793904179733856,
+        "fresnel_reflectance": 0.02117983573935479
+      },
+      "B11": {
+        "wavelength_nm": 1610.419194646924,
+        "ttot": 0.23071164208794676,
+        "two_way_transmittance": 0.5949999218906175,
+        "fresnel_reflectance": 0.019001848878351633
+      },
+      "B12": {
+        "wavelength_nm": 2185.6989951832156,
+        "ttot": 0.20414551547608192,
+        "two_way_transmittance": 0.6316565078065546,
+        "fresnel_reflectance": 0.017067391595103003
+      }
+    }
+  },
+  "20210718_S2B": {
+    "safe": "H:\\Sentinel-2\\Tidung\\L2A\\S2B_MSIL2A_20210718T025549_N0500_R032_T48MXU_20230128T143559.SAFE",
+    "native_B01": "H:\\Sentinel-2\\Tidung\\L2A\\S2B_MSIL2A_20210718T025549_N0500_R032_T48MXU_20230128T143559.SAFE\\GRANULE\\L2A_T48MXU_A022795_20210718T031236\\IMG_DATA\\R60m\\T48MXU_20210718T025549_B01_60m.jp2",
+    "boa_quantification_value": 10000.0,
+    "boa_offset_B01": -1000.0,
+    "solar_zenith_deg": 36.5723720746351,
+    "AOT_550": 0.2639999985694885,
+    "factor_from_B11": 0.5400877644988585,
+    "factor_from_B12": 0.5709658738140968,
+    "optical_terms": {
+      "B01": {
+        "wavelength_nm": 442.23127436510424,
+        "ttot": 0.5216711279338178,
+        "two_way_transmittance": 0.30968268586432296,
+        "fresnel_reflectance": 0.021172707166524727
+      },
+      "B11": {
+        "wavelength_nm": 1610.419194646924,
+        "ttot": 0.1992222155336165,
+        "two_way_transmittance": 0.6391239108242943,
+        "fresnel_reflectance": 0.018995201797035597
+      },
+      "B12": {
+        "wavelength_nm": 2185.6989951832156,
+        "ttot": 0.17617769622912333,
+        "two_way_transmittance": 0.673090583739825,
+        "fresnel_reflectance": 0.017061202958349043
+      }
+    }
+  },
+  "20210812_S2A": {
+    "safe": "H:\\Sentinel-2\\Tidung\\L2A\\S2A_MSIL2A_20210812T025551_N0500_R032_T48MXU_20230129T233447.SAFE",
+    "native_B01": "H:\\Sentinel-2\\Tidung\\L2A\\S2A_MSIL2A_20210812T025551_N0500_R032_T48MXU_20230129T233447.SAFE\\GRANULE\\L2A_T48MXU_A032061_20210812T030951\\IMG_DATA\\R60m\\T48MXU_20210812T025551_B01_60m.jp2",
+    "boa_quantification_value": 10000.0,
+    "boa_offset_B01": -1000.0,
+    "solar_zenith_deg": 32.3260787092848,
+    "AOT_550": 0.20999999344348907,
+    "factor_from_B11": 0.5736328363608778,
+    "factor_from_B12": 0.6163277121800663,
+    "optical_terms": {
+      "B01": {
+        "wavelength_nm": 442.6950461055438,
+        "ttot": 0.46270078911114965,
+        "two_way_transmittance": 0.36380448896555123,
+        "fresnel_reflectance": 0.021114659246739748
+      },
+      "B11": {
+        "wavelength_nm": 1613.659406661006,
+        "ttot": 0.1586272473680359,
+        "two_way_transmittance": 0.7070544098838015,
+        "fresnel_reflectance": 0.018939359670701622
+      },
+      "B12": {
+        "wavelength_nm": 2202.366687171678,
+        "ttot": 0.13956026447355407,
+        "two_way_transmittance": 0.7371376484988843,
+        "fresnel_reflectance": 0.016907984544462264
+      }
+    }
+  },
+  "20220414_S2B": {
+    "safe": "H:\\Sentinel-2\\Tidung\\L2A\\S2B_MSIL2A_20220414T025539_N0510_R032_T48MXU_20240606T110746.SAFE",
+    "native_B01": "H:\\Sentinel-2\\Tidung\\L2A\\S2B_MSIL2A_20220414T025539_N0510_R032_T48MXU_20240606T110746.SAFE\\GRANULE\\L2A_T48MXU_A026656_20220414T031404\\IMG_DATA\\R60m\\T48MXU_20220414T025539_B01_60m.jp2",
+    "boa_quantification_value": 10000.0,
+    "boa_offset_B01": -1000.0,
+    "solar_zenith_deg": 28.207256573227,
+    "AOT_550": 0.3779999911785126,
+    "factor_from_B11": 0.5176855134035163,
+    "factor_from_B12": 0.5376667295948411,
+    "optical_terms": {
+      "B01": {
+        "wavelength_nm": 442.23127436510424,
+        "ttot": 0.6437019957050049,
+        "two_way_transmittance": 0.25274853554940413,
+        "fresnel_reflectance": 0.021086440922276326
+      },
+      "B11": {
+        "wavelength_nm": 1610.419194646924,
+        "ttot": 0.28469351017697253,
+        "two_way_transmittance": 0.544281943488874,
+        "fresnel_reflectance": 0.018914810403387366
+      },
+      "B12": {
+        "wavelength_nm": 2185.6989951832156,
+        "ttot": 0.25209033751170346,
+        "two_way_transmittance": 0.5835491455171854,
+        "fresnel_reflectance": 0.016986399362054375
+      }
+    }
+  },
+  "20220708_S2A": {
+    "safe": "H:\\Sentinel-2\\Tidung\\L2A\\S2A_MSIL2A_20220708T025541_N0510_R032_T48MXU_20240616T123811.SAFE",
+    "native_B01": "H:\\Sentinel-2\\Tidung\\L2A\\S2A_MSIL2A_20220708T025541_N0510_R032_T48MXU_20240616T123811.SAFE\\GRANULE\\L2A_T48MXU_A036780_20220708T031928\\IMG_DATA\\R60m\\T48MXU_20220708T025541_B01_60m.jp2",
+    "boa_quantification_value": 10000.0,
+    "boa_offset_B01": -1000.0,
+    "solar_zenith_deg": 37.4142248988266,
+    "AOT_550": 0.20399999618530273,
+    "factor_from_B11": 0.5629788653428874,
+    "factor_from_B12": 0.6046397209673828,
+    "optical_terms": {
+      "B01": {
+        "wavelength_nm": 442.6950461055438,
+        "ttot": 0.4562801487155638,
+        "two_way_transmittance": 0.3564446145525768,
+        "fresnel_reflectance": 0.02118430412122475
+      },
+      "B11": {
+        "wavelength_nm": 1613.659406661006,
+        "ttot": 0.15413155687129176,
+        "two_way_transmittance": 0.7057693542308333,
+        "fresnel_reflectance": 0.019004277876579857
+      },
+      "B12": {
+        "wavelength_nm": 2202.366687171678,
+        "ttot": 0.13558335409042854,
+        "two_way_transmittance": 0.7359947673423254,
+        "fresnel_reflectance": 0.016968164237513808
+      }
+    }
+  },
+  "20230419_S2B": {
+    "safe": "H:\\Sentinel-2\\Tidung\\L2A\\S2B_MSIL2A_20230419T025529_N0510_R032_T48MXU_20240831T021632.SAFE",
+    "native_B01": "H:\\Sentinel-2\\Tidung\\L2A\\S2B_MSIL2A_20230419T025529_N0510_R032_T48MXU_20240831T021632.SAFE\\GRANULE\\L2A_T48MXU_A031947_20230419T030908\\IMG_DATA\\R60m\\T48MXU_20230419T025529_B01_60m.jp2",
+    "boa_quantification_value": 10000.0,
+    "boa_offset_B01": -1000.0,
+    "solar_zenith_deg": 28.883895677592,
+    "AOT_550": 0.3659999966621399,
+    "factor_from_B11": 0.5206048225483884,
+    "factor_from_B12": 0.5417324578390955,
+    "optical_terms": {
+      "B01": {
+        "wavelength_nm": 442.23127436510424,
+        "ttot": 0.6308566451105478,
+        "two_way_transmittance": 0.2585893598033396,
+        "fresnel_reflectance": 0.021091830851507065
+      },
+      "B11": {
+        "wavelength_nm": 1610.419194646924,
+        "ttot": 0.2756965358861745,
+        "two_way_transmittance": 0.5537318595957448,
+        "fresnel_reflectance": 0.018919830098317342
+      },
+      "B12": {
+        "wavelength_nm": 2185.6989951832156,
+        "ttot": 0.24409953714666258,
+        "two_way_transmittance": 0.5925423746495868,
+        "fresnel_reflectance": 0.016991067299270628
+      }
+    }
+  },
+  "20230723_S2A": {
+    "safe": "H:\\Sentinel-2\\Tidung\\L2A\\S2A_MSIL2A_20230723T025531_N0510_R032_T48MXU_20240916T185613.SAFE",
+    "native_B01": "H:\\Sentinel-2\\Tidung\\L2A\\S2A_MSIL2A_20230723T025531_N0510_R032_T48MXU_20240916T185613.SAFE\\GRANULE\\L2A_T48MXU_A042214_20230723T030809\\IMG_DATA\\R60m\\T48MXU_20230723T025531_B01_60m.jp2",
+    "boa_quantification_value": 10000.0,
+    "boa_offset_B01": -1000.0,
+    "solar_zenith_deg": 36.0130111834462,
+    "AOT_550": 0.3540000021457672,
+    "factor_from_B11": 0.5089966703940343,
+    "factor_from_B12": 0.5312710365060288,
+    "optical_terms": {
+      "B01": {
+        "wavelength_nm": 442.6950461055438,
+        "ttot": 0.616796238334409,
+        "two_way_transmittance": 0.25145996621649414,
+        "fresnel_reflectance": 0.0211597741421169
+      },
+      "B11": {
+        "wavelength_nm": 1613.659406661006,
+        "ttot": 0.2665238710924478,
+        "two_way_transmittance": 0.5507272283290211,
+        "fresnel_reflectance": 0.018981406517585335
+      },
+      "B12": {
+        "wavelength_nm": 2202.366687171678,
+        "ttot": 0.2350061630524083,
+        "two_way_transmittance": 0.5909789702134868,
+        "fresnel_reflectance": 0.016946956462282912
+      }
+    }
+  },
+  "20230817_S2B": {
+    "safe": "H:\\Sentinel-2\\Tidung\\L2A\\S2B_MSIL2A_20230817T025529_N0510_R032_T48MXU_20240822T114059.SAFE",
+    "native_B01": "H:\\Sentinel-2\\Tidung\\L2A\\S2B_MSIL2A_20230817T025529_N0510_R032_T48MXU_20240822T114059.SAFE\\GRANULE\\L2A_T48MXU_A033663_20230817T031834\\IMG_DATA\\R60m\\T48MXU_20230817T025529_B01_60m.jp2",
+    "boa_quantification_value": 10000.0,
+    "boa_offset_B01": -1000.0,
+    "solar_zenith_deg": 31.2994787682176,
+    "AOT_550": 0.3540000021457672,
+    "factor_from_B11": 0.5197173854015076,
+    "factor_from_B12": 0.541491468133204,
+    "optical_terms": {
+      "B01": {
+        "wavelength_nm": 442.23127436510424,
+        "ttot": 0.6180112945160907,
+        "two_way_transmittance": 0.2612097418645749,
+        "fresnel_reflectance": 0.021110009345164552
+      },
+      "B11": {
+        "wavelength_nm": 1610.419194646924,
+        "ttot": 0.26669956159537644,
+        "two_way_transmittance": 0.5602795784698275,
+        "fresnel_reflectance": 0.01893676358999597
+      },
+      "B12": {
+        "wavelength_nm": 2185.6989951832156,
+        "ttot": 0.23610873678162175,
+        "two_way_transmittance": 0.5987742655697588,
+        "fresnel_reflectance": 0.017006817473655962
+      }
+    }
+  },
+  "20230916_S2B": {
+    "safe": "H:\\Sentinel-2\\Tidung\\L2A\\S2B_MSIL2A_20230916T025529_N0510_R032_T48MXU_20240915T095036.SAFE",
+    "native_B01": "H:\\Sentinel-2\\Tidung\\L2A\\S2B_MSIL2A_20230916T025529_N0510_R032_T48MXU_20240915T095036.SAFE\\GRANULE\\L2A_T48MXU_A034092_20230916T031554\\IMG_DATA\\R60m\\T48MXU_20230916T025529_B01_60m.jp2",
+    "boa_quantification_value": 10000.0,
+    "boa_offset_B01": -1000.0,
+    "solar_zenith_deg": 24.0224991374109,
+    "AOT_550": 0.43799999356269836,
+    "factor_from_B11": 0.5044225526120619,
+    "factor_from_B12": 0.5190884832739997,
+    "optical_terms": {
+      "B01": {
+        "wavelength_nm": 442.23127436510424,
+        "ttot": 0.7079287805790776,
+        "two_way_transmittance": 0.22666489410261068,
+        "fresnel_reflectance": 0.021067186272194234
+      },
+      "B11": {
+        "wavelength_nm": 1610.419194646924,
+        "ttot": 0.3296784039752003,
+        "two_way_transmittance": 0.500963540359102,
+        "fresnel_reflectance": 0.01889688333889502
+      },
+      "B12": {
+        "wavelength_nm": 2185.6989951832156,
+        "ttot": 0.2920443591822841,
+        "two_way_transmittance": 0.542093741912156,
+        "fresnel_reflectance": 0.016969733019733032
+      }
+    }
+  },
+  "20231220_S2A": {
+    "safe": "H:\\Sentinel-2\\Tidung\\L2A\\S2A_MSIL2A_20231220T030131_N0510_R032_T48MXU_20231220T054150.SAFE",
+    "native_B01": "H:\\Sentinel-2\\Tidung\\L2A\\S2A_MSIL2A_20231220T030131_N0510_R032_T48MXU_20231220T054150.SAFE\\GRANULE\\L2A_T48MXU_A044359_20231220T031713\\IMG_DATA\\R60m\\T48MXU_20231220T030131_B01_60m.jp2",
+    "boa_quantification_value": 10000.0,
+    "boa_offset_B01": -1000.0,
+    "solar_zenith_deg": 28.2177907664052,
+    "AOT_550": 0.14399999380111694,
+    "factor_from_B11": 0.6091553892875047,
+    "factor_from_B12": 0.663188125806203,
+    "optical_terms": {
+      "B01": {
+        "wavelength_nm": 442.6950461055438,
+        "ttot": 0.39207370929174346,
+        "two_way_transmittance": 0.43267824661024473,
+        "fresnel_reflectance": 0.021073141742253942
+      },
+      "B11": {
+        "wavelength_nm": 1613.659406661006,
+        "ttot": 0.10917463702408449,
+        "two_way_transmittance": 0.7919332397313701,
+        "fresnel_reflectance": 0.01890069119959582
+      },
+      "B12": {
+        "wavelength_nm": 2202.366687171678,
+        "ttot": 0.09581422305505605,
+        "two_way_transmittance": 0.8148669686160604,
+        "fresnel_reflectance": 0.016872168115380462
+      }
+    }
+  },
+  "20240413_S2B": {
+    "safe": "H:\\Sentinel-2\\Tidung\\L2A\\S2B_MSIL2A_20240413T025529_N0510_R032_T48MXU_20240413T061025.SAFE",
+    "native_B01": "H:\\Sentinel-2\\Tidung\\L2A\\S2B_MSIL2A_20240413T025529_N0510_R032_T48MXU_20240413T061025.SAFE\\GRANULE\\L2A_T48MXU_A037095_20240413T031145\\IMG_DATA\\R60m\\T48MXU_20240413T025529_B01_60m.jp2",
+    "boa_quantification_value": 10000.0,
+    "boa_offset_B01": -1000.0,
+    "solar_zenith_deg": 28.1233468989008,
+    "AOT_550": 0.3540000021457672,
+    "factor_from_B11": 0.5264418943950756,
+    "factor_from_B12": 0.5491325394391463,
+    "optical_terms": {
+      "B01": {
+        "wavelength_nm": 442.23127436510424,
+        "ttot": 0.6180112945160908,
+        "two_way_transmittance": 0.26716439615941523,
+        "fresnel_reflectance": 0.021086634878034603
+      },
+      "B11": {
+        "wavelength_nm": 1610.419194646924,
+        "ttot": 0.2666995615953765,
+        "two_way_transmittance": 0.5657561406159538,
+        "fresnel_reflectance": 0.018914991026832688
+      },
+      "B12": {
+        "wavelength_nm": 2185.6989951832156,
+        "ttot": 0.2361087367816217,
+        "two_way_transmittance": 0.6039528786294759,
+        "fresnel_reflectance": 0.01698656731969505
+      }
+    }
+  },
+  "20240528_S2A": {
+    "safe": "H:\\Sentinel-2\\Tidung\\L2A\\S2A_MSIL2A_20240528T025551_N0510_R032_T48MXU_20240528T075350.SAFE",
+    "native_B01": "H:\\Sentinel-2\\Tidung\\L2A\\S2A_MSIL2A_20240528T025551_N0510_R032_T48MXU_20240528T075350.SAFE\\GRANULE\\L2A_T48MXU_A046647_20240528T031619\\IMG_DATA\\R60m\\T48MXU_20240528T025551_B01_60m.jp2",
+    "boa_quantification_value": 10000.0,
+    "boa_offset_B01": -1000.0,
+    "solar_zenith_deg": 35.5205660102047,
+    "AOT_550": 0.3540000021457672,
+    "factor_from_B11": 0.5103588460791952,
+    "factor_from_B12": 0.5328240651500262,
+    "optical_terms": {
+      "B01": {
+        "wavelength_nm": 442.6950461055438,
+        "ttot": 0.6167962383344091,
+        "two_way_transmittance": 0.2526433744796289,
+        "fresnel_reflectance": 0.02115636699174264
+      },
+      "B11": {
+        "wavelength_nm": 1613.659406661006,
+        "ttot": 0.26652387109244785,
+        "two_way_transmittance": 0.5518456804155716,
+        "fresnel_reflectance": 0.018978230241012035
+      },
+      "B12": {
+        "wavelength_nm": 2202.366687171678,
+        "ttot": 0.23500616305240826,
+        "two_way_transmittance": 0.5920371120552108,
+        "fresnel_reflectance": 0.01694401168572905
+      }
+    }
+  },
+  "20240727_S2A": {
+    "safe": "H:\\Sentinel-2\\Tidung\\L2A\\S2A_MSIL2A_20240727T025531_N0511_R032_T48MXU_20240727T092050.SAFE",
+    "native_B01": "H:\\Sentinel-2\\Tidung\\L2A\\S2A_MSIL2A_20240727T025531_N0511_R032_T48MXU_20240727T092050.SAFE\\GRANULE\\L2A_T48MXU_A047505_20240727T031433\\IMG_DATA\\R60m\\T48MXU_20240727T025531_B01_60m.jp2",
+    "boa_quantification_value": 10000.0,
+    "boa_offset_B01": -1000.0,
+    "solar_zenith_deg": 35.3195256625632,
+    "AOT_550": 0.36000001430511475,
+    "factor_from_B11": 0.5087261881956991,
+    "factor_from_B12": 0.5305644121217468,
+    "optical_terms": {
+      "B01": {
+        "wavelength_nm": 442.6950461055438,
+        "ttot": 0.623216894675835,
+        "two_way_transmittance": 0.24952568895474822,
+        "fresnel_reflectance": 0.02114919999099171
+      },
+      "B11": {
+        "wavelength_nm": 1613.659406661006,
+        "ttot": 0.2710195723073294,
+        "two_way_transmittance": 0.5467922038268613,
+        "fresnel_reflectance": 0.018971549303240725
+      },
+      "B12": {
+        "wavelength_nm": 2202.366687171678,
+        "ttot": 0.23898308331230214,
+        "two_way_transmittance": 0.5872372921214176,
+        "fresnel_reflectance": 0.01693781807499914
+      }
+    }
+  },
+  "20240811_S2B": {
+    "safe": "H:\\Sentinel-2\\Tidung\\L2A\\S2B_MSIL2A_20240811T025529_N0511_R032_T48MXU_20240811T070130.SAFE",
+    "native_B01": "H:\\Sentinel-2\\Tidung\\L2A\\S2B_MSIL2A_20240811T025529_N0511_R032_T48MXU_20240811T070130.SAFE\\GRANULE\\L2A_T48MXU_A038811_20240811T031124\\IMG_DATA\\R60m\\T48MXU_20240811T025529_B01_60m.jp2",
+    "boa_quantification_value": 10000.0,
+    "boa_offset_B01": -1000.0,
+    "solar_zenith_deg": 32.480611269975,
+    "AOT_550": 0.5519999861717224,
+    "factor_from_B11": 0.4499175641607422,
+    "factor_from_B12": 0.4518338543165082,
+    "optical_terms": {
+      "B01": {
+        "wavelength_nm": 442.23127436510424,
+        "ttot": 0.8299596590791012,
+        "two_way_transmittance": 0.1627766451174017,
+        "fresnel_reflectance": 0.02111897620562918
+      },
+      "B11": {
+        "wavelength_nm": 1610.419194646924,
+        "ttot": 0.4151496932541381,
+        "two_way_transmittance": 0.40330600375426723,
+        "fresnel_reflectance": 0.018945118203169846
+      },
+      "B12": {
+        "wavelength_nm": 2185.6989951832156,
+        "ttot": 0.367956988543936,
+        "two_way_transmittance": 0.447161803599372,
+        "fresnel_reflectance": 0.017014589946619564
+      }
+    }
+  },
+  "20240925_S2A": {
+    "safe": "H:\\Sentinel-2\\Tidung\\L2A\\S2A_MSIL2A_20240925T025531_N0511_R032_T48MXU_20240925T072447.SAFE",
+    "native_B01": "H:\\Sentinel-2\\Tidung\\L2A\\S2A_MSIL2A_20240925T025531_N0511_R032_T48MXU_20240925T072447.SAFE\\GRANULE\\L2A_T48MXU_A048363_20240925T031042\\IMG_DATA\\R60m\\T48MXU_20240925T025531_B01_60m.jp2",
+    "boa_quantification_value": 10000.0,
+    "boa_offset_B01": -1000.0,
+    "solar_zenith_deg": 22.0688333191657,
+    "AOT_550": 0.3540000021457672,
+    "factor_from_B11": 0.5379203845729029,
+    "factor_from_B12": 0.5643570640533689,
+    "optical_terms": {
+      "B01": {
+        "wavelength_nm": 442.6950461055438,
+        "ttot": 0.616796238334409,
+        "two_way_transmittance": 0.27707253918058306,
+        "fresnel_reflectance": 0.021057812647669483
+      },
+      "B11": {
+        "wavelength_nm": 1613.659406661006,
+        "ttot": 0.2665238710924478,
+        "two_way_transmittance": 0.5743002784096526,
+        "fresnel_reflectance": 0.018886423031776393
+      },
+      "B12": {
+        "wavelength_nm": 2202.366687171678,
+        "ttot": 0.2350061630524083,
+        "two_way_transmittance": 0.6132279990165536,
+        "fresnel_reflectance": 0.01685896080041046
+      }
+    }
+  },
+  "20241025_S2A": {
+    "safe": "H:\\Sentinel-2\\Tidung\\L2A\\S2A_MSIL2A_20241025T025811_N0511_R032_T48MXU_20241025T063158.SAFE",
+    "native_B01": "H:\\Sentinel-2\\Tidung\\L2A\\S2A_MSIL2A_20241025T025811_N0511_R032_T48MXU_20241025T063158.SAFE\\GRANULE\\L2A_T48MXU_A048792_20241025T031834\\IMG_DATA\\R60m\\T48MXU_20241025T025811_B01_60m.jp2",
+    "boa_quantification_value": 10000.0,
+    "boa_offset_B01": -1000.0,
+    "solar_zenith_deg": 20.4203573915463,
+    "AOT_550": 0.3720000088214874,
+    "factor_from_B11": 0.5337708280849267,
+    "factor_from_B12": 0.5584187247124118,
+    "optical_terms": {
+      "B01": {
+        "wavelength_nm": 442.6950461055438,
+        "ttot": 0.6360581754670065,
+        "two_way_transmittance": 0.2682222874467069,
+        "fresnel_reflectance": 0.021053197811164277
+      },
+      "B11": {
+        "wavelength_nm": 1613.659406661006,
+        "ttot": 0.2800109524067485,
+        "two_way_transmittance": 0.5602826009011791,
+        "fresnel_reflectance": 0.018882129076215698
+      },
+      "B12": {
+        "wavelength_nm": 2202.366687171678,
+        "ttot": 0.2469369040785532,
+        "two_way_transmittance": 0.5999630794133162,
+        "fresnel_reflectance": 0.016854987505540146
+      }
+    }
+  },
+  "20250528_S2B": {
+    "safe": "H:\\Sentinel-2\\Tidung\\L2A\\S2B_MSIL2A_20250528T025529_N0511_R032_T48MXU_20250528T063458.SAFE",
+    "native_B01": "H:\\Sentinel-2\\Tidung\\L2A\\S2B_MSIL2A_20250528T025529_N0511_R032_T48MXU_20250528T063458.SAFE\\GRANULE\\L2A_T48MXU_A042958_20250528T031505\\IMG_DATA\\R60m\\T48MXU_20250528T025529_B01_60m.jp2",
+    "boa_quantification_value": 10000.0,
+    "boa_offset_B01": -1000.0,
+    "solar_zenith_deg": 35.487317993517,
+    "AOT_550": 0.23999999463558197,
+    "factor_from_B11": 0.5524803134516092,
+    "factor_from_B12": 0.5869367144049391,
+    "optical_terms": {
+      "B01": {
+        "wavelength_nm": 442.23127436510424,
+        "ttot": 0.49598041794656833,
+        "two_way_transmittance": 0.33087395187050017,
+        "fresnel_reflectance": 0.021161092210787606
+      },
+      "B11": {
+        "wavelength_nm": 1610.419194646924,
+        "ttot": 0.18122825220362238,
+        "two_way_transmittance": 0.667555847273927,
+        "fresnel_reflectance": 0.018984372488097874
+      },
+      "B12": {
+        "wavelength_nm": 2185.6989951832156,
+        "ttot": 0.16019608021193443,
+        "two_way_transmittance": 0.6996106809160518,
+        "fresnel_reflectance": 0.017051121554620966
+      }
+    }
+  },
+  "20250612_S2C": {
+    "safe": "H:\\Sentinel-2\\Tidung\\L2A\\S2C_MSIL2A_20250612T025541_N0511_R032_T48MXU_20250612T080317.SAFE",
+    "native_B01": "H:\\Sentinel-2\\Tidung\\L2A\\S2C_MSIL2A_20250612T025541_N0511_R032_T48MXU_20250612T080317.SAFE\\GRANULE\\L2A_T48MXU_A004006_20250612T031332\\IMG_DATA\\R60m\\T48MXU_20250612T025541_B01_60m.jp2",
+    "boa_quantification_value": 10000.0,
+    "boa_offset_B01": -1000.0,
+    "solar_zenith_deg": 37.0860306840389,
+    "AOT_550": 0.335999995470047,
+    "factor_from_B11": 0.5166427304070587,
+    "factor_from_B12": 0.5394864803932885,
+    "optical_terms": {
+      "B01": {
+        "wavelength_nm": 444.22373327681976,
+        "ttot": 0.5937903880330069,
+        "two_way_transmittance": 0.2620447891029725,
+        "fresnel_reflectance": 0.02116894346479748
+      },
+      "B11": {
+        "wavelength_nm": 1612.0043428948534,
+        "ttot": 0.25312255251624594,
+        "two_way_transmittance": 0.5650196693358736,
+        "fresnel_reflectance": 0.01900294106662348
+      },
+      "B12": {
+        "wavelength_nm": 2191.2703452093447,
+        "ttot": 0.22379536774544256,
+        "two_way_transmittance": 0.6036564971939326,
+        "fresnel_reflectance": 0.01703351455711856
+      }
+    }
+  },
+  "20250724_S2A": {
+    "safe": "H:\\Sentinel-2\\Tidung\\L2A\\S2A_MSIL2A_20250724T030201_N0511_R032_T48MXU_20250724T082615.SAFE",
+    "native_B01": "H:\\Sentinel-2\\Tidung\\L2A\\S2A_MSIL2A_20250724T030201_N0511_R032_T48MXU_20250724T082615.SAFE\\GRANULE\\L2A_T48MXU_A052682_20250724T031552\\IMG_DATA\\R60m\\T48MXU_20250724T030201_B01_60m.jp2",
+    "boa_quantification_value": 10000.0,
+    "boa_offset_B01": -1000.0,
+    "solar_zenith_deg": 35.7595253828342,
+    "AOT_550": 0.3540000021457672,
+    "factor_from_B11": 0.5097126837901453,
+    "factor_from_B12": 0.5320877275815528,
+    "optical_terms": {
+      "B01": {
+        "wavelength_nm": 442.6950461055438,
+        "ttot": 0.6167962383344091,
+        "two_way_transmittance": 0.2520813493861413,
+        "fresnel_reflectance": 0.02115753932546444
+      },
+      "B11": {
+        "wavelength_nm": 1613.659406661006,
+        "ttot": 0.2665238710924478,
+        "two_way_transmittance": 0.5513148761615467,
+        "fresnel_reflectance": 0.01897932312139211
+      },
+      "B12": {
+        "wavelength_nm": 2202.366687171678,
+        "ttot": 0.23500616305240832,
+        "two_way_transmittance": 0.5915349619871813,
+        "fresnel_reflectance": 0.016945024899111434
+      }
+    }
+  },
+  "20250826_S2B": {
+    "safe": "H:\\Sentinel-2\\Tidung\\L2A\\S2B_MSIL2A_20250826T025529_N0511_R032_T48MXU_20250826T063629.SAFE",
+    "native_B01": "H:\\Sentinel-2\\Tidung\\L2A\\S2B_MSIL2A_20250826T025529_N0511_R032_T48MXU_20250826T063629.SAFE\\GRANULE\\L2A_T48MXU_A044245_20250826T031447\\IMG_DATA\\R60m\\T48MXU_20250826T025529_B01_60m.jp2",
+    "boa_quantification_value": 10000.0,
+    "boa_offset_B01": -1000.0,
+    "solar_zenith_deg": 29.0163133831168,
+    "AOT_550": 0.25200000405311584,
+    "factor_from_B11": 0.5627876503044272,
+    "factor_from_B12": 0.5977329506554504,
+    "optical_terms": {
+      "B01": {
+        "wavelength_nm": 442.23127436510424,
+        "ttot": 0.5088257809156378,
+        "two_way_transmittance": 0.3356658702721764,
+        "fresnel_reflectance": 0.021091761200681153
+      },
+      "B11": {
+        "wavelength_nm": 1610.419194646924,
+        "ttot": 0.1902252394546799,
+        "two_way_transmittance": 0.6649051997154002,
+        "fresnel_reflectance": 0.018919765228396696
+      },
+      "B12": {
+        "wavelength_nm": 2185.6989951832156,
+        "ttot": 0.1681868931818746,
+        "two_way_transmittance": 0.6970978054833175,
+        "fresnel_reflectance": 0.01699100697207934
+      }
+    }
+  },
+  "20250915_S2B": {
+    "safe": "H:\\Sentinel-2\\Tidung\\L2A\\S2B_MSIL2A_20250915T025519_N0511_R032_T48MXU_20250915T063854.SAFE",
+    "native_B01": "H:\\Sentinel-2\\Tidung\\L2A\\S2B_MSIL2A_20250915T025519_N0511_R032_T48MXU_20250915T063854.SAFE\\GRANULE\\L2A_T48MXU_A044531_20250915T031900\\IMG_DATA\\R60m\\T48MXU_20250915T025519_B01_60m.jp2",
+    "boa_quantification_value": 10000.0,
+    "boa_offset_B01": -1000.0,
+    "solar_zenith_deg": 24.1504026116626,
+    "AOT_550": 0.36000001430511475,
+    "factor_from_B11": 0.5313667591028105,
+    "factor_from_B12": 0.5543458915679865,
+    "optical_terms": {
+      "B01": {
+        "wavelength_nm": 442.23127436510424,
+        "ttot": 0.6244339857642132,
+        "two_way_transmittance": 0.2698349748214636,
+        "fresnel_reflectance": 0.021067260541902735
+      },
+      "B11": {
+        "wavelength_nm": 1610.419194646924,
+        "ttot": 0.27119805991289425,
+        "two_way_transmittance": 0.5661351932912084,
+        "fresnel_reflectance": 0.018896952470263163
+      },
+      "B12": {
+        "wavelength_nm": 2185.6989951832156,
+        "ttot": 0.24010414688683038,
+        "two_way_transmittance": 0.6042947473302367,
+        "fresnel_reflectance": 0.016969797273699683
+      }
+    }
+  },
+  "20260709_S2A": {
+    "safe": "H:\\Sentinel-2\\Tidung\\L2A\\S2A_MSIL2A_20260709T030151_N0512_R032_T48MXU_20260709T110608.SAFE",
+    "native_B01": "H:\\Sentinel-2\\Tidung\\L2A\\S2A_MSIL2A_20260709T030151_N0512_R032_T48MXU_20260709T110608.SAFE\\GRANULE\\L2A_T48MXU_A057687_20260709T031631\\IMG_DATA\\R60m\\T48MXU_20260709T030151_B01_60m.jp2",
+    "boa_quantification_value": 10000.0,
+    "boa_offset_B01": -1000.0,
+    "solar_zenith_deg": 37.3422545806349,
+    "AOT_550": 0.2939999997615814,
+    "factor_from_B11": 0.5275973284995893,
+    "factor_from_B12": 0.556779451983823,
+    "optical_terms": {
+      "B01": {
+        "wavelength_nm": 442.6950461055438,
+        "ttot": 0.552589802486871,
+        "two_way_transmittance": 0.28687380218848857,
+        "fresnel_reflectance": 0.021179265151501717
+      },
+      "B11": {
+        "wavelength_nm": 1613.659406661006,
+        "ttot": 0.2215669478179736,
+        "two_way_transmittance": 0.6061152463928609,
+        "fresnel_reflectance": 0.018999579126737443
+      },
+      "B12": {
+        "wavelength_nm": 2202.366687171678,
+        "ttot": 0.1952370394676164,
+        "two_way_transmittance": 0.6432729069914209,
+        "fresnel_reflectance": 0.016963806790220734
+      }
+    }
+  },
+  "20260808_S2A": {
+    "safe": "H:\\Sentinel-2\\Tidung\\L2A\\S2A_MSIL2A_20260808T030151_N0512_R032_T48MXU_20260808T123808.SAFE",
+    "native_B01": "H:\\Sentinel-2\\Tidung\\L2A\\S2A_MSIL2A_20260808T030151_N0512_R032_T48MXU_20260808T123808.SAFE\\GRANULE\\L2A_T48MXU_A058116_20260808T031811\\IMG_DATA\\R60m\\T48MXU_20260808T030151_B01_60m.jp2",
+    "boa_quantification_value": 10000.0,
+    "boa_offset_B01": -1000.0,
+    "solar_zenith_deg": 33.1765162268517,
+    "AOT_550": 0.2639999985694885,
+    "factor_from_B11": 0.5503030679450234,
+    "factor_from_B12": 0.5850920496071368,
+    "optical_terms": {
+      "B01": {
+        "wavelength_nm": 442.6950461055438,
+        "ttot": 0.5204865845631019,
+        "two_way_transmittance": 0.3187590563297164,
+        "fresnel_reflectance": 0.021123714913738365
+      },
+      "B11": {
+        "wavelength_nm": 1613.659406661006,
+        "ttot": 0.1990884841690797,
+        "two_way_transmittance": 0.6457615192058426,
+        "fresnel_reflectance": 0.018947797475615116
+      },
+      "B12": {
+        "wavelength_nm": 2202.366687171678,
+        "ttot": 0.17535247767522044,
+        "two_way_transmittance": 0.6803243337576435,
+        "fresnel_reflectance": 0.016915803367610737
+      }
+    }
+  }
+}

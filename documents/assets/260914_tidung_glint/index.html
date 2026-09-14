@@ -1769,7 +1769,7 @@ from rasterio.warp import transform as transform_coords
 ROOT = Path(r&quot;H:\Sentinel-2\Tidung\Tidung_Glint_Corrected_Products_20260913&quot;)
 PRODUCTS = ROOT / &quot;FINAL_PRODUCTS&quot;
 OUTPUT = ROOT / &quot;PIXEL_RRS_EXPORT&quot;
-BANDS = (&quot;B02&quot;, &quot;B03&quot;, &quot;B04&quot;, &quot;B05&quot;, &quot;B06&quot;, &quot;B07&quot;, &quot;B08&quot;, &quot;B8A&quot;)
+BANDS = (&quot;B01&quot;, &quot;B02&quot;, &quot;B03&quot;, &quot;B04&quot;, &quot;B05&quot;, &quot;B06&quot;, &quot;B07&quot;, &quot;B08&quot;, &quot;B8A&quot;)
 
 
 def band_path(scene: str, folder: str, suffix: str, band: str) -&gt; Path:
@@ -1870,11 +1870,12 @@ def write_scene(csv_path: Path) -&gt; tuple[str, int, str]:
     note_rows = [
         (&quot;Scene&quot;, scene),
         (&quot;One row&quot;, &quot;One valid georeferenced pixel&quot;),
-        (&quot;Rrs columns&quot;, &quot;Approximate above-surface Rrs = final retained BOA reflectance / pi&quot;),
+        (&quot;Rrs columns&quot;, &quot;Nine bands B01–B8A; approximate above-surface Rrs = final retained BOA reflectance / pi&quot;),
         (&quot;rrs columns&quot;, &quot;Approximate below-surface rrs = Rrs / (0.52 + 1.7 Rrs)&quot;),
         (&quot;Units&quot;, &quot;sr-1&quot;),
         (&quot;Coordinates&quot;, &quot;Projected pixel-centre coordinates and EPSG:4326 longitude/latitude&quot;),
         (&quot;Radiometric limitation&quot;, &quot;Derived from Sen2Cor L2A BOA reflectance; not field-validated water-leaving reflectance&quot;),
+        (&quot;B01 spatial limitation&quot;, &quot;B01 is aligned to the 20 m grid but retains native 60 m spatial information&quot;),
         (&quot;IOP limitation&quot;, &quot;Absorption a and backscattering bb are not included; retrieve them with a documented semi-analytical inversion&quot;),
     ]
     notes.hide_gridlines(2)
@@ -1905,7 +1906,7 @@ def main() -&gt; None:
         sheet.write_string(row, 0, scene)
         sheet.write_number(row, 1, count)
         sheet.write_url(row, 2, f&quot;external:{filename}&quot;, string=filename)
-        sheet.write_string(row, 3, &quot;Pixel coordinates, 8 Rrs bands and 8 rrs bands&quot;)
+        sheet.write_string(row, 3, &quot;Pixel coordinates, 9 Rrs bands and 9 rrs bands, including B01&quot;)
     sheet.freeze_panes(1, 0)
     sheet.autofilter(0, 0, len(results), 3)
     sheet.set_column(&quot;A:A&quot;, 18)

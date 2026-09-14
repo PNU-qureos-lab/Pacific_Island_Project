@@ -15,7 +15,7 @@ from rasterio.warp import transform as transform_coords
 ROOT = Path(r"H:\Sentinel-2\Tidung\Tidung_Glint_Corrected_Products_20260913")
 PRODUCTS = ROOT / "FINAL_PRODUCTS"
 OUTPUT = ROOT / "PIXEL_RRS_EXPORT"
-BANDS = ("B02", "B03", "B04", "B05", "B06", "B07", "B08", "B8A")
+BANDS = ("B01", "B02", "B03", "B04", "B05", "B06", "B07", "B08", "B8A")
 
 
 def band_path(scene: str, folder: str, suffix: str, band: str) -> Path:

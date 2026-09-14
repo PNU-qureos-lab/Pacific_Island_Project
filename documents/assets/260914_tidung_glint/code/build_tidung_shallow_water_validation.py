@@ -15,7 +15,7 @@ ROOT=Path(r"H:\Sentinel-2\Tidung\Tidung_Glint_Corrected_Products_20260913")
 JOINT=PROJECT/"outputs"/"Tidung_Joint_HydroLight_Glint_Multiband_Experiment_20260911"
 FULL=PROJECT/"outputs"/"Tidung_Full_Glint_All_Scenes_Experiment_20260911"
 L2A=Path(r"H:\Sentinel-2\Tidung\L2A"); OUT=ROOT/"shallow-water-validation"
-BANDS=("B02","B03","B04","B05","B06","B07","B08","B8A"); WAVE=np.array((492,560,665,704,740,783,833,865))
+BANDS=("B01","B02","B03","B04","B05","B06","B07","B08","B8A"); WAVE=np.array((443,492,560,665,704,740,783,833,865))
 GROUPS=("LOW","MEDIUM","HIGH"); GCOL={"LOW":"#2563eb","MEDIUM":"#f59e0b","HIGH":"#dc2626"}
 STCOL={"Original":"#334155","Cycle 0":"#0f766e","Final":"#2563eb"}
 
@@ -54,23 +54,23 @@ def analyse_scene(scene):
     shallow=water&complete&finite&(distance>=4)&(distance<=25)
     swir=uniform_filter(np.nan_to_num(np.minimum(b11,b12),nan=0),7,mode="nearest")
     q1,q2=np.nanquantile(swir[shallow],(1/3,2/3)); masks={"LOW":shallow&(swir<=q1),"MEDIUM":shallow&(swir>q1)&(swir<=q2),"HIGH":shallow&(swir>q2)}
-    visible=np.nanmean(original[:3],axis=0); occupied=[]; centres=[]
+    visible=np.nanmean(original[1:4],axis=0); occupied=[]; centres=[]
     for g in GROUPS:
         picked=select_centres(masks[g],visible,occupied); occupied+=picked; centres += [(y,x,g) for y,x in picked]
     spectra={s:[] for s in STCOL}; records=[]
     for i,(y,x,g) in enumerate(centres,1):
         sl=np.s_[y-3:y+4,x-3:x+4]; vals=[np.nanmean(z[:,sl[0],sl[1]],axis=(1,2)) for z in (original,cycle0,final)]
         for key,val in zip(spectra,vals):spectra[key].append(val)
-        records.append({"roi":f"SW{i:02d}","group":g,"row":y,"column":x,"distance_to_island_land_m":float(distance[y,x]*20),"raw_swir_indicator":float(np.nanmean(np.minimum(b11[sl],b12[sl]))),"cycle0_removed_visible_mean":float(np.mean(vals[0][:3]-vals[1][:3])),"final_additional_removed_visible_mean":float(np.mean(vals[1][:3]-vals[2][:3])),"final_minimum":float(np.min(vals[2]))})
+        records.append({"roi":f"SW{i:02d}","group":g,"row":y,"column":x,"distance_to_island_land_m":float(distance[y,x]*20),"raw_swir_indicator":float(np.nanmean(np.minimum(b11[sl],b12[sl]))),"cycle0_removed_visible_mean":float(np.mean(vals[0][1:4]-vals[1][1:4])),"final_additional_removed_visible_mean":float(np.mean(vals[1][1:4]-vals[2][1:4])),"final_minimum":float(np.min(vals[2]))})
     med={g:{stage:np.median(np.stack([values[i] for i,r in enumerate(records) if r["group"]==g]),axis=0) for stage,values in spectra.items()} for g in GROUPS}
     retained="Cycle 1" if not np.allclose(final,cycle0,equal_nan=True) else "Cycle 0"
-    preservation_result=spearmanr(original[1][shallow],final[1][shallow],nan_policy="omit")
+    preservation_result=spearmanr(original[2][shallow],final[2][shallow],nan_policy="omit")
     preservation=float(getattr(preservation_result,"statistic",preservation_result.correlation))
     neg0=float(np.mean(np.stack(spectra["Cycle 0"])<0)*100); negf=float(np.mean(np.stack(spectra["Final"])<0)*100)
     roi_swir=np.array([r["raw_swir_indicator"] for r in records])
     stage_stats={}
     for stage,values in spectra.items():
-        vis=np.array([float(np.mean(v[:3])) for v in values])
+        vis=np.array([float(np.mean(v[1:4])) for v in values])
         by_group={g:float(np.median([vis[i] for i,r in enumerate(records) if r["group"]==g])) for g in GROUPS}
         corr,p=spearmanr(roi_swir,vis)
         stage_stats[stage]={"low":by_group["LOW"],"medium":by_group["MEDIUM"],"high":by_group["HIGH"],"highMinusLow":by_group["HIGH"]-by_group["LOW"],"spearman":float(corr),"p":float(p)}
@@ -79,7 +79,7 @@ def analyse_scene(scene):
     for name,values in (("Cycle 0",removal0),("After Cycle 0",removalf)):
         corr,p=spearmanr(roi_swir,values)
         removal_stats[name]={"low":float(np.median(values[:10])),"medium":float(np.median(values[10:20])),"high":float(np.median(values[20:30])),"spearman":float(corr),"p":float(p)}
-    rgb=np.moveaxis(original[[2,1,0]],0,-1); lo,hi=np.nanpercentile(rgb,(2,98),axis=(0,1))
+    rgb=np.moveaxis(original[[3,2,1]],0,-1); lo,hi=np.nanpercentile(rgb,(2,98),axis=(0,1))
     map_name=f"{scene}_shallow_roi_locations.png"; fig,pa=plt.subplots(figsize=(13,7),constrained_layout=True)
     pa.imshow(np.clip((rgb-lo)/np.maximum(hi-lo,1e-6),0,1)); pa.contour(shallow,[.5],colors="#00ffff",linewidths=1.2)
     for i,(y,x,g) in enumerate(centres,1): pa.plot(x,y,"o",ms=9,color=GCOL[g],markeredgecolor="white"); pa.text(x+3,y,str(i),fontsize=8,color="white",weight="bold")

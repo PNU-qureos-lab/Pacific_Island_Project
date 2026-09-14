@@ -49,11 +49,12 @@ def write_scene(csv_path: Path) -> tuple[str, int, str]:
     note_rows = [
         ("Scene", scene),
         ("One row", "One valid georeferenced pixel"),
-        ("Rrs columns", "Approximate above-surface Rrs = final retained BOA reflectance / pi"),
+        ("Rrs columns", "Nine bands B01–B8A; approximate above-surface Rrs = final retained BOA reflectance / pi"),
         ("rrs columns", "Approximate below-surface rrs = Rrs / (0.52 + 1.7 Rrs)"),
         ("Units", "sr-1"),
         ("Coordinates", "Projected pixel-centre coordinates and EPSG:4326 longitude/latitude"),
         ("Radiometric limitation", "Derived from Sen2Cor L2A BOA reflectance; not field-validated water-leaving reflectance"),
+        ("B01 spatial limitation", "B01 is aligned to the 20 m grid but retains native 60 m spatial information"),
         ("IOP limitation", "Absorption a and backscattering bb are not included; retrieve them with a documented semi-analytical inversion"),
     ]
     notes.hide_gridlines(2)
@@ -84,7 +85,7 @@ def main() -> None:
         sheet.write_string(row, 0, scene)
         sheet.write_number(row, 1, count)
         sheet.write_url(row, 2, f"external:{filename}", string=filename)
-        sheet.write_string(row, 3, "Pixel coordinates, 8 Rrs bands and 8 rrs bands")
+        sheet.write_string(row, 3, "Pixel coordinates, 9 Rrs bands and 9 rrs bands, including B01")
     sheet.freeze_panes(1, 0)
     sheet.autofilter(0, 0, len(results), 3)
     sheet.set_column("A:A", 18)
