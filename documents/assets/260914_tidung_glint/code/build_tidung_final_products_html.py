@@ -619,7 +619,7 @@ def main() -> None:
     <div><span class="eyebrow">ALL RETAINED SCENES</span><h2>Shallow-water glint-correction results</h2></div>
     <p>Select a date to inspect the near-island shallow-water area, ROI locations, glint ranking, correction stages and safety checks.</p>
   </div>
-  <iframe title="Tidung shallow-water results" src="shallow-water-validation/index.html?v=20260914-shallow-ranges" style="display:block;width:100%;height:calc(100vh - 150px);min-height:900px;border:0;background:#fff"></iframe>
+  <iframe title="Tidung shallow-water results" src="shallow-water-validation/index.html?v=20260914-shallow-stage-graphs" style="display:block;width:100%;height:calc(100vh - 150px);min-height:900px;border:0;background:#fff"></iframe>
 </section>
 '''
     portable = ROOT / "Tidung_Glint_Pipeline"
