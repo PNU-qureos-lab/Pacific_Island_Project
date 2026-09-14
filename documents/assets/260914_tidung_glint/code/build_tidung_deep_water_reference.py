@@ -34,10 +34,22 @@ def main():
         px=v[:,good];med=np.median(px,axis=1);std=np.std(px,axis=1);cv=std/med;spectra.append(med)
         stats.append((r,y,x,px,med,std,cv))
     med_matrix=np.stack(spectra); centre=np.median(med_matrix,axis=0);distance=np.sqrt(np.mean(((med_matrix-centre)/np.maximum(centre,1e-9))**2,axis=1));limit=float(np.median(distance)+3*1.4826*np.median(np.abs(distance-np.median(distance))))
+    eligible=[i for i,(r,y,x,px,med,std,cv) in enumerate(stats) if np.all(px>0) and np.all(cv<=.05) and not bool(distance[i]>limit)]
+    fixed=[i for i in eligible if float(stats[i][0]["distance_to_land_m"])>=1500]
+    if fixed:
+        accepted_indices=set(fixed);selection_mode="fixed >=1.5 km mapped-land distance";confidence="STANDARD"
+    elif eligible:
+        accepted_indices=set(sorted(eligible,key=lambda i:float(stats[i][0]["distance_to_land_m"]),reverse=True)[:5])
+        selection_mode="fallback: five farthest spectrally stable offshore candidates";confidence="REVIEW_REQUIRED"
+    else:
+        relaxed=[i for i,(r,y,x,px,med,std,cv) in enumerate(stats) if np.all(px>0) and np.all(cv<=.10)]
+        if not relaxed:raise RuntimeError("No finite, positive offshore ROI with <=10% within-ROI CV")
+        accepted_indices=set(sorted(relaxed,key=lambda i:float(stats[i][0]["distance_to_land_m"]),reverse=True)[:5])
+        selection_mode="fallback: five farthest finite-positive offshore candidates with <=10% within-ROI CV";confidence="REVIEW_REQUIRED"
     audit=[];mask=np.zeros(valid.shape,np.uint8);mask[~valid]=255;accepted=[]
     for i,(r,y,x,px,med,std,cv) in enumerate(stats):
         dist=float(r["distance_to_land_m"]); outlier=bool(distance[i]>limit); positive=bool(np.all(px>0)); uniform=bool(np.all(cv<=.05))
-        if positive and uniform and not outlier and dist>=1500:
+        if i in accepted_indices:
             decision="ACCEPTED_DEEP";reason="";accepted.append(r["roi"]);mask[y-3:y+4,x-3:x+4]=np.where(valid[y-3:y+4,x-3:x+4],1,255)
         elif positive and np.all(cv<=.10):
             decision="UNCERTAIN"; reason=("Spectrum is an outlier relative to the offshore ensemble." if outlier else "ROI is closer than 1.5 km to mapped land; reef-slope or bottom influence cannot be independently excluded.")
@@ -49,13 +61,12 @@ def main():
         for j,w in enumerate(WAVES):row[f"CV_Rrs_{w}"]=float(cv[j])
         row.update({"bottom_visible":"false" if decision=="ACCEPTED_DEEP" else "uncertain","cloud_or_shadow":False,"land_adjacency":False,"remaining_glint":False,"boat_or_wake":False,"turbid_plume":False,"spectral_outlier":outlier})
         audit.append(row)
-    if not accepted:raise RuntimeError("No ACCEPTED_DEEP ROI")
     accepted_pixels=stack[:,mask==1]
     if not np.all(np.isfinite(accepted_pixels)) or not np.all(accepted_pixels>0):raise RuntimeError("Accepted pixels are not finite and positive")
     combined=np.median(accepted_pixels,axis=1);count=int((mask==1).sum())
     provenance=json.loads((PRODUCT/"05_Provenance"/"B01_processing_and_grid_provenance.json").read_text())
     sza=float(provenance["solar_zenith_deg"])
-    spectrum={"scene":SCENE,**{f"deep_Rrs_{w}_sr-1":float(combined[i]) for i,w in enumerate(WAVES)},"accepted_ROI_count":len(accepted),"accepted_pixel_count":count,"solar_zenith_deg":sza,"aggregation_method":"median of all accepted deep-water pixels","selection_method":"Manual RGB context plus finite-positive, <=5% within-ROI CV, ensemble spectral consistency, and >=1.5 km mapped-land distance","Rrs_product_type":"Rrs_approx from glint-corrected Sen2Cor BOA divided by pi"}
+    spectrum={"scene":SCENE,**{f"deep_Rrs_{w}_sr-1":float(combined[i]) for i,w in enumerate(WAVES)},"accepted_ROI_count":len(accepted),"accepted_pixel_count":count,"solar_zenith_deg":sza,"aggregation_method":"median of all accepted deep-water pixels","selection_method":f"Finite-positive, <=5% within-ROI CV, ensemble spectral consistency; {selection_mode}","selection_confidence":confidence,"Rrs_product_type":"Rrs_approx from glint-corrected Sen2Cor BOA divided by pi"}
     write_csv(OUT/f"{SCENE}_deep_water_Rrs.csv",[spectrum]);write_csv(OUT/f"{SCENE}_deep_water_ROI_audit.csv",audit)
     mp=profile.copy();mp.update(driver="GTiff",dtype="uint8",count=1,nodata=255,compress="deflate",predictor=2)
     with rasterio.open(OUT/f"{SCENE}_deep_water_mask.tif","w",**mp) as ds:

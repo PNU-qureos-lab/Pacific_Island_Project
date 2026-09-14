@@ -22,7 +22,8 @@ def main():
         with rasterio.open(p) as ds:
             arrays.append(ds.read(1).astype(float));profile=ds.profile.copy() if profile is None else profile
     stack=np.stack(arrays);valid=np.all(np.isfinite(stack),axis=0)&np.all(stack>0,axis=0)
-    scl_path=next(L2A.glob(f"S2A_MSIL2A_{SCENE[:8]}*.SAFE/GRANULE/*/IMG_DATA/R20m/*_SCL_20m.jp2"))
+    platform=SCENE.split("_")[1]
+    scl_path=next(L2A.glob(f"{platform}_MSIL2A_{SCENE[:8]}*.SAFE/GRANULE/*/IMG_DATA/R20m/*_SCL_20m.jp2"))
     scl=np.zeros(valid.shape,np.uint8)
     with rasterio.open(scl_path) as src:
         reproject(rasterio.band(src,1),scl,src_transform=src.transform,src_crs=src.crs,dst_transform=profile["transform"],dst_crs=profile["crs"],resampling=Resampling.nearest)
