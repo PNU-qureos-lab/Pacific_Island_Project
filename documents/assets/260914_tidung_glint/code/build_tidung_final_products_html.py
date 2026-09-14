@@ -349,6 +349,8 @@ def main() -> None:
     html = html.replace('<h2>6. Residual glint check</h2>', '<h2>6. Residual-glint check on Cycle 0</h2>')
     html = html.replace('<h2>Accepted scene: spectra at all three stages</h2>', '<h2>7. Cycle 1 correction and three-stage spectra</h2>')
     html = html.replace('<h2>Final repeated glint check: Cycle 0 versus Cycle 1</h2>', '<h2>8. Final repeated glint check</h2>')
+    html = html.replace('<div class="card"><h2>8. Final repeated glint check</h2><table>', '<details class="card"><summary><b>Show complete Cycle 0 versus Cycle 1 numerical summary</b></summary><table>')
+    html = html.replace('Processing therefore stopped at Cycle 1.</p></div>`:\'\'}', 'Processing therefore stopped at Cycle 1.</p></details>`:\'\'}')
     html = html.replace(
         "${roiRankingSvg(s)}${spectrumSvg(s,'before','Original L2A spectra')}<p><b>Interpretation:</b>",
         "${roiRankingSvg(s)}${spectrumSvg(s,'before','Original L2A spectra')}<div class=\"status\">${metric('LOW classification median',med('LOW').toFixed(6))}${metric('MEDIUM classification median',med('MEDIUM').toFixed(6))}${metric('HIGH classification median',med('HIGH').toFixed(6))}</div><p><b>Interpretation:</b>",
@@ -396,6 +398,8 @@ def main() -> None:
     )
     html = html.replace('<h2>Accepted scene: spectra at all three stages</h2>', '<h2>7. Cycle 1 correction and three-stage spectra</h2>')
     html = html.replace('<h2>Final repeated glint check: Cycle 0 versus Cycle 1</h2>', '<h2>8. Final repeated glint check</h2>')
+    html = html.replace('<div class="card"><h2>8. Final repeated glint check</h2><table>', '<details class="card"><summary><b>Show complete Cycle 0 versus Cycle 1 numerical summary</b></summary><table>')
+    html = html.replace('Processing therefore stopped at Cycle 1.</p></div>`:\'\'}', 'Processing therefore stopped at Cycle 1.</p></details>`:\'\'}')
     html = html.replace('<h2>5. HydroLight simulation and water–glint fitting</h2>', '<h2>9. HydroLight water comparison</h2>')
     html = html.replace('<h2>6. Closest possible water and the decision not to subtract more</h2>', '<h2>HydroLight fitted result</h2>')
     html = html.replace('<h2>6. Confirmed residual component and retained Cycle 1</h2>', '<h2>HydroLight fitted result</h2>')
@@ -435,6 +439,15 @@ def main() -> None:
     html = html.replace('<section id="archive" class="panel">', '<section id="archive" class="panel active">')
     html = html.replace('renderEvidence(s);drawChart()', 'orderedEvidence(s);drawChart()')
     html = html.replace('<h2>All 30 offshore ROI spectra</h2>', '<h2>9. Final spectral and numeric quality</h2>')
+    html = html.replace('<option value="final" selected>Final retained</option>', '<option value="final" selected>Final retained BOA</option><option value="finalRrs">Final approximate Rrs</option>')
+    html = html.replace('Use the control to compare original L2A, first correction, and final retained reflectance.', 'Use the control to compare original L2A, Cycle 0, final retained BOA, and final approximate Rrs.')
+    html = html.replace('</svg></div><div class="card note"><b>How to read it:</b> after correction,', '</svg><details><summary><b>Final approximate Rrs group-median values</b></summary><div id="rrsTable"></div></details></div><div class="card note"><b>How to read it:</b> choose Final approximate Rrs to plot all 30 ROI spectra in sr⁻¹. Rrs is calculated as final BOA / π. It passed numerical conversion checks but is not field-validated water-leaving reflectance. After correction,')
+    html = html.replace("function drawChart(){const svg=document.getElementById('chart'),s=DATA.scenes[current],stage=document.getElementById('stage').value,", "function drawChart(){const svg=document.getElementById('chart'),s=DATA.scenes[current],stage=document.getElementById('stage').value,isRrs=stage==='finalRrs',sourceStage=isRrs?'final':stage,")
+    html = html.replace("const vals=s.roi.flatMap(r=>r[stage]).filter(Number.isFinite)", "const vals=s.roi.flatMap(r=>r[sourceStage].map(v=>isRrs?v/Math.PI:v)).filter(Number.isFinite)")
+    html = html.replace("const pts=r[stage].map((y,i)=>`${X(DATA.wavelengths[i])},${Y(y)}`).join(' ')", "const pts=r[sourceStage].map((v,i)=>{const y=isRrs?v/Math.PI:v;return `${X(DATA.wavelengths[i])},${Y(y)}`}).join(' ')")
+    html = html.replace("median(rs.map(r=>r[stage][i]))", "median(rs.map(r=>isRrs?r[sourceStage][i]/Math.PI:r[sourceStage][i]))")
+    html = html.replace('font-weight="700">BOA reflectance</text>`;svg.setAttribute', 'font-weight="700">${isRrs?\'Approximate Rrs (sr⁻¹)\':\'BOA reflectance\'}</text>`;svg.setAttribute')
+    html = html.replace("svg.innerHTML=z}", "svg.innerHTML=z;const groups=['LOW','MEDIUM','HIGH'];document.getElementById('rrsTable').innerHTML='<p>Values are medians of the 10 ROIs in each fixed group.</p><table><tr><th>Band</th><th>Wavelength</th><th>LOW Rrs</th><th>MEDIUM Rrs</th><th>HIGH Rrs</th></tr>'+DATA.bands.map((b,i)=>'<tr><td>'+b+'</td><td>'+DATA.wavelengths[i]+' nm</td>'+groups.map(g=>'<td>'+median(s.roi.filter(r=>r.group===g).map(r=>r.final[i]/Math.PI)).toFixed(6)+' sr⁻¹</td>').join('')+'</tr>').join('')+'</table><p class=\"small\"><b>Definition:</b> approximate Rrs = final retained BOA reflectance / π. These are satellite-derived values, not field validation.</p>'}")
     html = html.replace('<h2>Final products</h2>', '<h2>10. Final products</h2>')
     html = html.replace('<h2>Archive selection</h2>', '<h2>Appendix. All-scene archive summary</h2>')
     html = html.replace(
