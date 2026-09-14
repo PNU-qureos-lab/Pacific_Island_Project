@@ -1,0 +1,11 @@
+name: tidung-glint
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy>=2.0,<3
+  - pandas>=2.2,<3
+  - scipy>=1.13,<2
+  - matplotlib>=3.8,<4
+  - rasterio>=1.3,<2
+  - pillow>=10,<13

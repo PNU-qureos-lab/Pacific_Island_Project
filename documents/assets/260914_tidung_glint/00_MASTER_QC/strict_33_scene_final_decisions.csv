@@ -1,0 +1,34 @@
+﻿scene,decision,stop_reason
+20200628_S2A,SCENE_REJECTED,Initial screening: Full valid-water Cycle-0 negative pixels 20.00% exceed the fixed 5% image-QC limit
+20200728_S2A,RETAIN_CYCLE0,Residual glint was not supported by the complete 30-ROI gate
+20200802_S2B,SCENE_REJECTED,Cycle-0 visible negative pixels exceed 1%
+20200921_S2B,SCENE_REJECTED,Cycle-0 visible negative pixels exceed 1%
+20210424_S2A,RETAIN_CYCLE0,Residual glint was not supported by the complete 30-ROI gate
+20210608_S2B,RETAIN_CYCLE0,Residual glint was not supported by the complete 30-ROI gate
+20210718_S2B,RETAIN_CYCLE0,Known-injection recovery failed; Cycle 1 not authorized
+20210812_S2A,RETAIN_CYCLE0,Known-injection recovery failed; Cycle 1 not authorized
+20220414_S2B,RETAIN_CYCLE0,Known-injection recovery failed; Cycle 1 not authorized
+20220708_S2A,RETAIN_CYCLE0,Residual glint was not supported by the complete 30-ROI gate
+20230419_S2B,RETAIN_CYCLE0,Known-injection recovery failed; Cycle 1 not authorized
+20230723_S2A,RETAIN_CYCLE0,Residual glint was not supported by the complete 30-ROI gate
+20230817_S2B,RETAIN_CYCLE0,Residual glint was not supported by the complete 30-ROI gate
+20230916_S2B,RETAIN_CYCLE0,Residual glint was not supported by the complete 30-ROI gate
+20231031_S2A,SCENE_REJECTED,Initial screening: Cycle-0 negative-water pixels 7.38% exceed the fixed 5% image-QC limit
+20231220_S2A,RETAIN_CYCLE0,Residual glint was not supported by the complete 30-ROI gate
+20240413_S2B,RETAIN_CYCLE0,Residual glint was not supported by the complete 30-ROI gate
+20240528_S2A,RETAIN_CYCLE0,Known-injection recovery failed; Cycle 1 not authorized
+20240727_S2A,RETAIN_CYCLE0,Residual glint was not supported by the complete 30-ROI gate
+20240811_S2B,RETAIN_CYCLE0,Residual glint was not supported by the complete 30-ROI gate
+20240925_S2A,RETAIN_CYCLE1,Residual evidence and final Cycle-1 QC passed
+20241025_S2A,RETAIN_CYCLE0,Residual glint was not supported by the complete 30-ROI gate
+20250528_S2B,RETAIN_CYCLE0,Residual glint was not supported by the complete 30-ROI gate
+20250612_S2C,RETAIN_CYCLE0,Residual glint was not supported by the complete 30-ROI gate
+20250724_S2A,RETAIN_CYCLE0,Known-injection recovery failed; Cycle 1 not authorized
+20250826_S2B,RETAIN_CYCLE0,Residual glint was not supported by the complete 30-ROI gate
+20250915_S2B,RETAIN_CYCLE0,Known-injection recovery failed; Cycle 1 not authorized
+20251101_S2A,SCENE_REJECTED,Cycle-0 visible negative pixels exceed 1%
+20260314_S2B,SCENE_REJECTED,Initial screening: Full valid-water Cycle-0 negative pixels 6.86% exceed the fixed 5% image-QC limit
+20260403_S2B,SCENE_REJECTED,Initial screening: Full valid-water Cycle-0 negative pixels 11.40% exceed the fixed 5% image-QC limit
+20260619_S2A,SCENE_REJECTED,Cycle-0 visible negative pixels exceed 1%
+20260709_S2A,RETAIN_CYCLE0,Known-injection recovery failed; Cycle 1 not authorized
+20260808_S2A,RETAIN_CYCLE0,Residual glint was not supported by the complete 30-ROI gate

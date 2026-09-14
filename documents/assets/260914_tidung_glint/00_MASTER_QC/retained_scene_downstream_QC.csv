@@ -1,0 +1,26 @@
+﻿scene,retained_product,additional_residual_correction_applied,visible_negative_percent_max,numeric_conversion_pass,visible_spectrum_nonzero_pass,provisional_downstream_eligibility,scientific_scope
+20200728_S2A,Cycle0,False,0.0,True,True,PASS,Algorithm-ready numeric product; not validated against field Rrs or bathymetry ground truth
+20210424_S2A,Cycle0,False,0.0,True,True,PASS,Algorithm-ready numeric product; not validated against field Rrs or bathymetry ground truth
+20210608_S2B,Cycle0,False,0.0,True,True,PASS,Algorithm-ready numeric product; not validated against field Rrs or bathymetry ground truth
+20210718_S2B,Cycle0,False,0.0,True,True,PASS,Algorithm-ready numeric product; not validated against field Rrs or bathymetry ground truth
+20210812_S2A,Cycle0,False,0.0,True,True,PASS,Algorithm-ready numeric product; not validated against field Rrs or bathymetry ground truth
+20220414_S2B,Cycle0,False,0.0,True,True,PASS,Algorithm-ready numeric product; not validated against field Rrs or bathymetry ground truth
+20220708_S2A,Cycle0,False,0.0,True,True,PASS,Algorithm-ready numeric product; not validated against field Rrs or bathymetry ground truth
+20230419_S2B,Cycle0,False,0.0,True,True,PASS,Algorithm-ready numeric product; not validated against field Rrs or bathymetry ground truth
+20230723_S2A,Cycle0,False,0.0008869336928371234,True,True,PASS,Algorithm-ready numeric product; not validated against field Rrs or bathymetry ground truth
+20230817_S2B,Cycle0,False,0.0,True,True,PASS,Algorithm-ready numeric product; not validated against field Rrs or bathymetry ground truth
+20230916_S2B,Cycle0,False,0.0,True,True,PASS,Algorithm-ready numeric product; not validated against field Rrs or bathymetry ground truth
+20231220_S2A,Cycle0,False,0.0017707263519495696,True,True,PASS,Algorithm-ready numeric product; not validated against field Rrs or bathymetry ground truth
+20240413_S2B,Cycle0,False,0.08990164226267301,True,True,PASS,Algorithm-ready numeric product; not validated against field Rrs or bathymetry ground truth
+20240528_S2A,Cycle0,False,0.0,True,True,PASS,Algorithm-ready numeric product; not validated against field Rrs or bathymetry ground truth
+20240727_S2A,Cycle0,False,0.0,True,True,PASS,Algorithm-ready numeric product; not validated against field Rrs or bathymetry ground truth
+20240811_S2B,Cycle0,False,0.0,True,True,PASS,Algorithm-ready numeric product; not validated against field Rrs or bathymetry ground truth
+20240925_S2A,Cycle1,True,0.0,True,True,PASS,Algorithm-ready numeric product; not validated against field Rrs or bathymetry ground truth
+20241025_S2A,Cycle0,False,0.0,True,True,PASS,Algorithm-ready numeric product; not validated against field Rrs or bathymetry ground truth
+20250528_S2B,Cycle0,False,0.001786240588744898,True,True,PASS,Algorithm-ready numeric product; not validated against field Rrs or bathymetry ground truth
+20250612_S2C,Cycle0,False,0.0008873271930291576,True,True,PASS,Algorithm-ready numeric product; not validated against field Rrs or bathymetry ground truth
+20250724_S2A,Cycle0,False,0.002669656682150675,True,True,PASS,Algorithm-ready numeric product; not validated against field Rrs or bathymetry ground truth
+20250826_S2B,Cycle0,False,0.0,True,True,PASS,Algorithm-ready numeric product; not validated against field Rrs or bathymetry ground truth
+20250915_S2B,Cycle0,False,0.0,True,True,PASS,Algorithm-ready numeric product; not validated against field Rrs or bathymetry ground truth
+20260709_S2A,Cycle0,False,0.0,True,True,PASS,Algorithm-ready numeric product; not validated against field Rrs or bathymetry ground truth
+20260808_S2A,Cycle0,False,0.0,True,True,PASS,Algorithm-ready numeric product; not validated against field Rrs or bathymetry ground truth

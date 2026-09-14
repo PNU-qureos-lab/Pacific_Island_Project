@@ -1,0 +1,10 @@
+{
+  "comparison_outputs": "D:/Tidung_Data/outputs/Tidung_Glint_Comparison_Rerun_20260903",
+  "joint_multiband_outputs": "D:/Tidung_Data/outputs/Tidung_Joint_HydroLight_Glint_Multiband_Experiment_20260911",
+  "controlled_hydrolight_outputs": "D:/Tidung_Data/outputs/Tidung_Residual_Glint_V3_Experiment_20260911",
+  "experiment_output": "D:/Tidung_Data/outputs/Tidung_Full_Glint_All_Scenes_Experiment",
+  "l2a_archive": "D:/Tidung_Data/L2A",
+  "final_product_output": "D:/Tidung_Data/Tidung_Glint_Corrected_Products",
+  "scene": "20240925_S2A",
+  "random_seed": 20260911
+}

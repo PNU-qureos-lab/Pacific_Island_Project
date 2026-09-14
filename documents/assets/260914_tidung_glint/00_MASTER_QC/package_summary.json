@@ -1,0 +1,24 @@
+{
+  "created_utc": "2026-09-13T06:42:42.765937+00:00",
+  "L2A_SAFE_scenes_in_archive": 80,
+  "strict_candidate_scenes": 33,
+  "retained_scenes": 25,
+  "rejected_candidate_scenes": 8,
+  "Cycle1_scenes": [
+    "20240925_S2A"
+  ],
+  "provisional_downstream_pass_scenes": 25,
+  "bands": [
+    "B02",
+    "B03",
+    "B04",
+    "B05",
+    "B06",
+    "B07",
+    "B08",
+    "B8A"
+  ],
+  "above_surface_Rrs_formula": "Rrs_approx = final retained Sen2Cor L2A BOA reflectance / pi",
+  "below_surface_rrs_formula": "rrs_approx = Rrs_approx / (0.52 + 1.7 * Rrs_approx)",
+  "warning": "These are approximate radiometric transformations of L2A BOA, not field-validated water-leaving Rrs. Do not treat HydroLight as truth."
+}
